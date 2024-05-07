@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!--
+  <link rel="stylesheet" href="/src/jquery.mCustomScrollbar.css" />
+  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!--
+  <script src="/path/to/jquery.mCustomScrollbar.concat.min.js"></script>
+  -->
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script defer src="script.js"></script>
+  
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="/src/styles.css">
+
+  <title>FYP</title>
+</head>
+
+<body class="container" id="content1">
+
+  <div class="spinner-wrapper">
+    <div class="spinner-border spinner2" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p style="position: absolute; top: 58%; margin: 0 auto; font-size: 2rem; color: #DA3A57; text-align: center;">Regularly clean your PC from dust!</p>
+  </div>
+
+  <nav class="navbar w-100 z-3" style="background-color: white; padding-bottom: 8rem;">
+      <div class="container-fluid">
+        <div class="container">
+
+        <a class="ms-auto navbar-brand" href="index.html">
+          <img src="/images/logo.png" alt="Logo" width="105" height="110" padding="0px">
+        </a>
+  
+        <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 25%; font-family: poppins, medium, sans-serif; color: #303030; z-index: 5;">
+        <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Parts</a>
+          <ul class="dropdown-menu z-3">
+            <li><a class="dropdown-item" href="motherboard.html">Motherboard</a></li>
+            <li><a class="dropdown-item" href="gpu.html">GPU</a></li>
+            <li><a class="dropdown-item" href="cpu.html">CPU</a></li>
+            <li><a class="dropdown-item" href="pccase.html" style="color: #DA3A57;">PC Cases</a></li>
+            <li><a class="dropdown-item" href="#">RAM</a></li>
+            <li><a class="dropdown-item" href="#">Storage</a></li>
+            <li><a class="dropdown-item" href="#">Cooling Systems</a></li>
+            <li><a class="dropdown-item" href="#">Power Source Unit</a></li>
+            <li><a class="dropdown-item" href="#">RGB Lights</a></li>
+          </ul>
+          </ul>
+        </div>
+
+        <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 10%; font-family: poppins, medium, sans-serif; color: #303030;">
+        <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+          <a class="navbarfont nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">How to Build</a>
+            <ul class="test dropdown-menu">
+              <li><a class="dropdown-item" href="budgetpc.html">Budget PC Guide</a></li>
+              <li><a class="dropdown-item" href="modernpc.html">Modern PC Guide</a></li>
+              <li><a class="dropdown-item" href="propc.html">Professional PC Guide</a></li>
+            </ul>
+          </ul>
+        </div>
+
+      </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-3 sticky-top" style="padding: 2rem 2rem 5rem 0; display: block;">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style="background-color: #F0F0F0;">
+                    Table of Contents
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                      <!-- this feature was depricated <il><a class="sidebarlinks" href="#content1">Top of Page</a></il><br> -->
+                      <il><a class="sidebarlinks" href="#content2">What is a PC Case?</a></il><br>
+                      <il><a class="sidebarlinks" href="#content3">Who makes PC Cases?</a></il><br>
+                      <il><a class="sidebarlinks" href="#content4">Manufacturers</a></il><br>
+                      <il><a class="sidebarlinks" href="#content5">Different Types of Cases</a></il><br>
+                      <il><a class="sidebarlinks" href="#content6">Price</a></il><br>
+                      <il><a class="sidebarlinks" href="#content7">Other Bits</a></il>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style="background-color: #F0F0F0;">
+                    Parts
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                      <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                          <il class="sidebaritemsli"><a class="sidebarlinks" href="motherboard.html">Motherboard</a></il><br>
+                          <il><a class="sidebarlinks" href="gpu.html">Graphics Card</a></il><br>
+                          <il><a class="sidebarlinks" href="cpu.html">CPU</a></il><br>
+                          <il><a class="sidebarlinks" href="#" style="color: #DA3A57;">PC Cases</a></il><br>
+                          <il><a class="sidebarlinks" href="#">RAM</a></il><br>
+                          <il><a class="sidebarlinks" href="#">Storage</a></il>
+                          <il><a class="sidebarlinks" href="#">Cooling Systems</a></il><br>
+                          <il><a class="sidebarlinks" href="#">Power Source Unit</a></il><br>
+                          <il><a class="sidebarlinks" href="#">RGB</a></il>
+                        </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style="background-color: #F0F0F0;">
+                    How to Build Guides
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                      <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                          <il class="sidebaritemsli"><a class="sidebarlinks" href="budgetpc.html">Budget PC Guide</a></il><br>
+                          <il><a class="sidebarlinks" href="modernpc.html">Modern PC Guide</a></il><br>
+                          <il><a class="sidebarlinks" href="propc.html">Professional PC Guide</a></il><br>
+                        </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-9" style="padding-top: 2rem; padding-bottom: 10rem; ">
+
+          <section style="position: relative;">
+
+          <h1>PC Cases</h1>
+
+
+
+          <div>
+            <model-viewer 
+                  
+            id="pccasealpha"
+            ar 
+            ar-modes="webxr"
+            auto-rotate
+            camera-controls
+            touch-action="pan-y"
+            camera-orbit="45deg 65deg 20m"
+            loading="eager"
+            disable-zoom
+            alt="A Gaming PC 3D Model"
+            shadow-intensity="1"
+            src="/models/fractal_design._meshify_c__-__pc_case.glb">
+
+            <button class="hotspot" slot="hotspot-pcc1" data-visibility-attribute="visible" data-position="1.8 -13 -1.6" data-normal="16.045857m -2.5997957m 10m">
+              <div class="altannotation">Fractal Mesh Front</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-pcc2" data-visibility-attribute="visible" data-position="0 -10 0" data-normal="0.00045857m -2.5997957m 5m">
+              <div class="annotation">Thermal Glass</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-pcc3" data-visibility-attribute="visible" data-position="-2 -10 -1" data-normal="-0.00045857m -2.5997957m -5m">
+              <div class="altannotation">I/O Slot</div>
+            </button>
+
+            <button class="hotspot" slot="hotspot-pcc4" data-visibility-attribute="visible" data-position="-2 -13 -1" data-normal="-0.00045857m -2.5997957m -5m">
+              <div class="annotationlong">PSU Slot</div>
+            </button>
+
+            </model-viewer>
+          </div>
+          <div style="width: 55%; font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+          <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+            You may feel there is nothing you cant gleam from the surface when looking at what a PC case is and what its all about, but never judge a book by its cover! While a PC case may be more straightforward than a central processing unit or a praphics processing unit <strong>there are still many smaller pieces to PC cases that can potetnially be overlooked,</strong> and we wouldnt want that now would we?
+            <br><br>
+            The computer case serves mainly as a way to physically mount and contain all the actual components inside a computer, like the motherboard, hard drive, optical drive, floppy disk drive, etc.
+            <br><br>
+            Some popular computer case manufacturers include CORSAIR, NZXT, Xoxide, and Antec. 
+            <br><br>
+            <strong>Motherboards, computer cases, and power supplies all come in different sizes called form factors. All three must be compatible to work properly together.</strong> Many computer cases, especially ones made of metal, contain very sharp edges. <strong>Be very careful when working with an open case to avoid serious cuts.</strong> 
+          </p>
+
+        </section>
+
+
+
+        <div id="carouselExampleCaptions" class="carousel slide" style="margin: 3rem auto; border: #DA3A57 solid 0.1rem;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5" style="background-color: #303030;"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/images/pc4.webp" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H5 Elite</h5>
+                <p>Premium Compact Mid-Tower Case</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc1.jpg" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H7 Flow</h5>
+                <p>Mid-Tower Airflow Case</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc3.jpg" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Fractal Design North</h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc5.webp" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H9 Flow</h5>
+                <p>Dual-Chamber Mid-Tower Air Flow Case</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc6.webp" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Fractal Design North</h5>
+                
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #303030;"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #303030;"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      
+
+        <h2><a id="content2">What is a PC Case?</a></h2>
+        <div style="float: right;" class="sketchfab-embed-wrapper"> <iframe title="Fractal Design. Meshify C - PC Case" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="540" height="380" src="https://sketchfab.com/models/a46526af2ac84fa098edc3f01c012450/embed?autospin=1&autostart=1&camera=0&ui_hint=0&dnt=1"> </iframe> </div>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+          The computer case serves mainly as a way to physically mount and contain all the actual components inside a computer, like the motherboard, hard drive, optical drive, floppy disk drive, etc. They typically come bundled with a power supply.
+
+          The housing of a laptop, netbook, or tablet is also considered a case, but since they aren't purchased separately or very replaceable, the computer case tends to refer to the one that's part of a traditional desktop PC.
+          
+          Some popular computer case manufacturers include CORSAIR, NZXT, Xoxide, and Antec. 
+          <br><br>
+          There are several reasons why we use computer cases. One is for protection, which is easy to assume because it's the most obvious. Dust, animals, toys, liquids, etc. can all damage the internal parts of a computer if the hard shell of a computer case doesn't enclose them and keep them away from the outside environment.
+
+          Do you always want to be looking at the disc drive, hard drive, motherboard, cables, power supply, and everything else that makes up the computer? Probably not. Hand-in-hand with protection, a computer case also doubles as a way to hide all those parts of the computer that nobody really wants to see each time they look in that direction. 
+
+          <br><br>
+          Another good reason to use a case is to keep the computer cool. Proper airflow over the internal components is one more benefit to using a computer case. While the case has special vents to allow some of the fan air to escape, the rest of it can be used to cool down the hardware, which would otherwise get pretty hot and possibly overheat to the point of malfunction.
+          <br><br>
+        </p>
+
+        <div class="picturescontainer">
+          <div>
+            <img class="img-fluid" style="height: 20rem; width: auto;" src="/images/pc2.webp">
+          </div>
+          <div>
+            <img class="img-fluid" style="height: 20rem; width: auto;" src="/images/pc7.jpg">
+          </div>
+        </div>
+
+        <div id="carouselExampleCaptions2" class="carousel slide" style="margin: 1rem auto; border: #DA3A57 solid 0.1rem;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" aria-label="Slide 4" style="background-color: #303030;"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="4" aria-label="Slide 5" style="background-color: #303030;"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/images/pc8.jpg" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H5 Elite</h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc9.jpg" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H7 Flow</h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc10.jpg" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H5 Elite</h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc5.webp" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>NZXT H9 Flow</h5>
+                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/pc6.webp" class="d-block" alt="..." style="height: 30rem; margin: 1rem auto 12rem auto;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Fractal Design North</h5>
+                
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #303030;"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #303030;"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <h2 id="content3">Who makes PC Cases?</h2>
+        <div style="display: flex;">
+          <div style="width: 30%;">
+            <p>Some manufacturers include:</p>
+            <ul class="bulletpoints">
+              <li><a style="color: #DA3A57;" href="https://nzxt.com/">NZXT</a></li>
+              <li><a style="color: #DA3A57;" href="https://www.fractal-design.com/products/cases/north/north/chalk-white/">Fractal Design</a></li>
+              <li><a style="color: #DA3A57;" href="https://www.corsair.com/us/en">Corsair</a></li>
+              <li><a style="color: #DA3A57;" href="https://www.antec.com/">Antec</a></li>
+            </ul>
+          </div>
+
+          <div style="width: 70%; padding-bottom: 2rem;">
+
+              <!--
+
+                <div class="container text-center">
+                  <div class="row">
+                    <div>
+                      <a href="https://www.asus.com/ie/"><img class="gridimage" src="/images/424_asus.jpg"></a>
+                    </div>
+                    <div>
+                      <a><img class="gridimage" src="/images/Acer-Logo.png"></a>
+                    </div>
+                    <div>
+                      <a><img class="gridimage" src="/images/ASRock-logo.png"></a>
+                    </div>
+                  </div>
+                </div>
+
+              -->
+
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <a href="https://nzxt.com/"><img class="gridimage3" src="/images/Untitled2.png"></a>
+                    </div>
+                    <div class="col">
+                      <a href="https://www.fractal-design.com/products/cases/north/north/chalk-white/"><img class="gridimage3" src="/images/q1.webp"></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <a href="https://www.corsair.com/us/en"><img class="gridimage3" src="/images/q2.webp"></a>
+                    </div>
+                    <div class="col">
+                      <a href="https://www.antec.com/"><img class="gridimage3" src="/images/q3.png"></a>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+              
+        </div>
+
+
+        
+        <section>
+
+            <div class="accordion" id="accordionPanelsStayOpenmb">
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header">
+                  <button style="background-color: #F0F0F0;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOnemb" aria-expanded="true" aria-controls="panelsStayOpen-collapseOnemb">
+                    <h4 id="content4">Manufacturers</h4>
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOnemb" class="accordion-collapse collapse show">
+                  <div class="accordion-body .accordianitems mCustomScrollbar" data-mcs-theme="rounded-dots" style="overflow: auto; height: 40rem;">
+                    
+                    <p>
+                      For first-time PC builders, the options available for each component can be overwhelming.
+
+From the motherboard to the graphics card, and everything in between, you’ll have endless choices when putting your new rig together.
+
+The most important component, perhaps, is the one that holds everything together: the case.<br><br>
+
+Your computer case is certainly the most visible portion of your build, and let’s not kid ourselves - the aesthetics are half the fun of PC building! Plus, the build quality can suffer immensely if your case doesn’t provide adequate airflow.
+
+To help you wade through the virtually endless options of gaming PC cases, we’ve put together a list of the top ten computer case manufacturers. These companies have a reputation for building great products that look and perform great.<br><br>
+
+As with all pieces of a custom PC build, price tags will vary quite a bit based on the part you choose. That being said, there are quality computer cases available for any budget, and we’ve included a wide variety in the list below.
+
+This list was put together based on aggregate ratings and industry-leading tech reviews. We are in no way affiliated with these companies, and don’t stand to make any profit off of these recommendations.<br><br>
+Corsair Gaming - there’s no debating thawt Corsair is an absolute giant in the case space. They’ve been around since 1994, and are a publicly traded company. Over time, Corsair has branched into virtually every product associated with custom PC builders and computer gaming.<br><br>
+NZXT - this American-based company is known for selling full builds, offering customizable builds, and most importantly - their cases. The NZXT lineup includes everything from full tower to micro itx and everything in between. Plus, they offer 2 day shipping on full gaming PC builds which is incredibly convenient for customers.<br><br>
+Fractal Designs - the Meshify series has been dominating top case lists and awards this year. Fractal Designs is based out of Sweden, and is known for beautiful designs and industry-leading quality.<br><br>
+                    </p>
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header">
+                  <button style="background-color: #F0F0F0;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwomb" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwomb">
+                    <h4 id="content5">Different Types of Cases</h4>
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwomb" class="accordion-collapse collapse">
+                  <div class="accordion-body" style="overflow: auto; height: 40rem;">
+                    <p>
+                      PC cases come with a plethora of stylish features, such as tempered glass panels, hinged or screw doors, noise-dampening, and LED lighting, and are constructed from a variety of different materials. Along with all of this, PC cases come in a variety of different sizes to suit everyone. <br><br>
+
+                      <strong>Some different sizes include</strong><br><br>
+
+                      Mini-ITX<br>
+  Micro-ATX<br>
+Mid Tower<br>
+Full Tower<br>
+<strong>Mini-ITX</strong><br><br>
+Mini-ITX cases are the ideal choice for those looking to create a space-saving SFF (small form factor) PC but still take advantage of powerful gaming hardware. Mini-ITX cases are typically lightweight and are often a low-cost option for those on a budget, but still feature a whole host of unique features such as RGB lighting or tempered glass panels.  <br><br>
+Mini-ITX cases are often compatible with corresponding Mini-ITX motherboards, however, to guarantee full compatibility we recommend that you check the case specification or the manufacturer’s website.  <br><br>
+<strong>Micro-ATX</strong><br><br>
+Similar to Mini-ITX, Micro-ATX cases are perfect for creating a compact SFF gaming PC without compromising on hardware. With a Micro-ATX case, you can build your very own powerful gaming PC that doesn’t take up too much room on your desk.  
+
+The main difference between these two PC case sizes is the additional space in a Micro-ATX. You can utilise this extra wiggle room for more complex cooling configurations, such as water cooling, and larger graphics cards.  <br><br>
+<strong>Mid Tower</strong><br><br>
+Mid Tower cases can usually support all your full-sized components, such as ATX motherboards, large power supplies, and even horizontal or vertical GPU layouts. The extra space that a Mid Tower case boasts means you can take advantage of large comprehensive cooling solutions, such as AiO custom water cooling or multiple fans.  
+
+In addition to this, Mid Tower cases also come with plenty of must-have aesthetic features such as tempered glass panels, unique designs, and RGB lighting.  <br><br>
+
+A Mid-Tower case will typically fit ATX, Micro-ATX, and Mini-ITX motherboards, with some models even supporting up to E-ATX. To ensure full compatibility, be sure to check your case specification or the manufacturer’s website.  <br><br>
+<strong>Full Tower</strong><br><br>
+Often measuring 22 inches x 10 inches, Full Tower cases can support up to the largest standard of motherboard and offer support for plenty of unique customisations, including complex water cooling, vertical or horizontal GPU layouts, tempered glass side panels, and RGB lighting.  <br><br>
+Full Tower PC cases are often compatible with E-ATX, ATX, Micro-ATX, and Mini-ITX motherboards. However, we recommend that you check the case specification or the manufacturer’s website.  <br><br>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" style="background-color: #F0F0F0;">
+                <h2 class="accordion-header">
+                  <button style="background-color: #F0F0F0;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThreemb" aria-expanded="false" aria-controls="panelsStayOpen-collapseThreemb">
+                    <h4 id="content6">Price</h4>
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThreemb" class="accordion-collapse collapse">
+                  <div class="accordion-body" style="overflow: auto; height: 40rem;">
+                    <p>
+                      <h2>It depends</h2><br><br>
+
+                      There was a time when your choice of motherboard could have a heavy toll on your PC's performance, but these days, the actual difference is almost non-existent unless you go really low-end.<br><br>
+
+                      We first need to examine why these motherboards are so expensive in the first place. The short story is, while a lot of it is just branding and hype, expensive motherboards do have a few legitimate advantages.<br><br>
+
+                      For one, expensive motherboards will almost always throw in everything and the kitchen sink. This means that you'll often see features and motherboard parts like Thunderbolt 4, PCIe Gen 5 ports (both actual PCI Express slots and m.2 slots) all around, DDR5 RAM, several USB ports, Wi-Fi 6E, Bluetooth 5.2, and amazing onboard audio. The motherboard itself is also thicker and accommodates more complex PCB traces, in order to allow for faster connectivity all around the board. <br><br>
+
+                      Those things are neat, but you really don't need them. At least, not all of them. Still, for the right people, it has a few neat perks you can take advantage of. In the case of some ASUS ROG motherboards, you have something called "DIMM.2," which gives you an extra DIMM slot (not compatible with RAM) that can be used for extra m.2 NVMe SSDs thanks to a special adapter. <br><br>
+
+                      There's no need to match your high-end CPU with an equally expensive motherboard. As long as it has reliable VRMs and connectivity, you'll do well. The technical differences between B660 and Z690 motherboards in the case of Intel or B550 and X570 motherboards in the case of AMD come down to the higher-end chipsets supporting more PCIe Gen 5/4 lanes and overclocking support. That's pretty much it. You won't see a performance drop running your Core i9 or Ryzen 9 on a lower-end chipset. <br><br>
+
+                      Most features you want to care about will come from your actual motherboard choice or manufacturer rather than your chipset. In fact, as a good rule of thumb, if you're given the choice, it's actually better to buy a good B660/B550 motherboard than a cheaper Z690/X570 motherboard. You'll likely have a better and more stable experience with the lower-end chipset in those scenarios. <br><br>
+
+                      While spending more money on your motherboard was once a worthwhile investment, nowadays the actual technical differences between most cheap and expensive motherboards mean that you can get away with a well-researched, cheaper option and have an experience that's 99% as good as the one you'll have with an expensive option.<br><br>
+
+                      Hopefully, you can now make a more educated purchase. <br><br>
+
+                      <h2>Should I buy second-hand?</h2>
+
+                      Motherboards have a lot of elements to them, from capacitors to chips, heatsinks, jumpers, and batteries. If any part were to fail, it's hard to predict what would happen. It might be completely fine, or the whole motherboard might just not work at all. Make sure the motherboard is in complete working order before you buy it. <br><br>
+
+                      <strong>Excercise extreme caution.</strong>
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </section>
+
+
+
+        <h2 style="padding-top: 3rem;"><a id="content7">Other Bits</a></h2>
+        <p>
+          The computer case itself can be constructed from any material that still allows the internal devices to be supported. This is usually steel, plastic, or aluminum but might instead be wood, glass, or styrofoam.<br><br>
+
+          Most computer cases are rectangular and black. Case modding is the term used to describe the styling of a case to personalize it with things like custom internal lighting, paint, or a liquid cooling system.<br><br>
+          
+          The front of the computer case contains a power button and sometimes a reset button. Small LED lights are also typical, representing the current power status, hard drive activity, and sometimes other internal processes. These buttons and lights connect directly to the motherboard, which is secured to the inside of the case.<br><br>
+          
+          Cases often contain multiple 5.25-inch and 3.5-inch expansion bays for optical drives, floppy disk drives, hard drives, and other media drives. These expansion bays are located at the front of the case so that, for example, the DVD drive can be easily reached by the user when in use.<br><br>
+          
+          At least one side of the case, perhaps both, slide or swing open to allow access to the internal components. See our guide on opening a computer case for instructions, or see what the inside of a PC looks like.<br><br>
+          
+          The rear of the computer case contains small openings to fit the connectors contained on the motherboard, which is mounted inside. The power supply is also mounted just inside the back of the case, and a large opening allows for the connection of the power cord and use of the built-in fan. Fans or other cooling devices may be attached to any and all sides of the case. <br><br>
+        </p>
+
+      <div style="padding: 3rem 5rem;"><a data-quiz="QF71H3IBI" data-type=3 href="https://take.quiz-maker.com/QF71H3IBI" style="display:inline-block; text-align:left; margin:0 auto; width:100%; max-width:824px; box-sizing:border-box; text-decoration:none; padding:1em; border:1px solid #CCC; color:inherit;"><div style="display:inline-block; width:50%; vertical-align:top; box-sizing:border-box; padding:0 1em 0 0;"><span style="display:block; font-family:sans-serif; font-size:1.5em; line-height:40px; color:inherit;">Test your PC Case Understanding</span><span style="display:inline-block; font-family:sans-serif; font-size:1em; margin-top:10px; line-height:1.5; color:inherit;">If your motherboard is an ATX motherboard, what case do you need?, Among these, which is the most important thing about your PC Case, Your PC case should be cleaned</span></div><div style="background:URL('http://www.poll-maker.com/3012/images/ogquiz.png') 0 50% / cover no-repeat; width:50%; background-clip:content-box; display:inline-block; box-sizing:border-box; padding:0 0 0 1em;"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" style="width:100%; opacity:0;"></div></a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="z-index: 98; background-image: linear-gradient(to top, rgba(249, 122, 115, 0.334), rgba(255,0,0,0)); height: 6rem; width: 200%; position: fixed; bottom: 0; left: -50%;">
+    
+
+      <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+
+
+    </div>
+
+    
+  
+</body>
+<footer style="width: 100%; height: 18rem; background-color: #DA3A57; position: absolute; left: 0; z-index: 98;">
+
+  <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 8rem; left: 5%;" href="contact.html">Contact Me</a>
+
+  <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 4rem; left: 5%;" href="references.html">Link to my Bibliography of references, research and sources</a>
+
+</footer>
+
+<a href="#"><img src="/images/pngwing.com.png" style="width: auto; height: 8%; position: fixed; bottom: 4rem; right: 6.5%; z-index: 100;"></a>
+<div style="width: 4rem; height: 6rem; position: fixed; bottom: 3rem; right: 0; background-color: #FFFFFF; z-index: 97; padding: 3rem 6rem;"></div>
+
+</html>

@@ -1,0 +1,601 @@
+@charset "UTF-8";
+
+.spinner-wrapper {
+    background-color: #F0F0F0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+  }
+
+  .spinner {
+    color: #71DAFB;
+  }
+  
+  .spinner2 {
+    color: #DA3A57;
+  }
+
+  .spinner3 {
+    color: #419D45;
+  }
+
+  .spinner-border {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .hotspot{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #71DAFB;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  .hotspot[slot="hotspot-motherboard"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-motherboard"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-gpu"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-gpu"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-onoff"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-onoff"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-airflow"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-airflow"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-cooler"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-cooler"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-ram"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-ram"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-psu"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-psu"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-ioports"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-ioports"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-backpanel"]{
+    --min-hotspot-opacity: 0;
+    background-color: #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-backpanel"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #71DAFB;
+  }
+
+  .hotspot[slot="hotspot-mb1"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb1"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb2"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb2"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb3"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb3"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb4"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb4"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb5"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb5"]:not([data-visible]) {
+    
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb6"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-mb6"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu1"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu1"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu2"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu2"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu3"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-gpu3"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-cpu1"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-cpu1"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-cpu2"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-cpu2"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc1"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc1"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc2"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc2"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc3"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc3"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc4"]{
+    --min-hotspot-opacity: 0;
+    background-color: #DA3A57;
+  }
+
+  .hotspot[slot="hotspot-pcc4"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid #DA3A57;
+  }
+
+  .annotation{
+    font-family: poppins, medium, sans-serif; 
+    color: #303030; 
+    font-weight: 600; 
+    font-size: 1.1rem;
+    background-color: #D9D9D9;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+  }
+
+  .altannotation{
+    font-family: poppins, medium, sans-serif; 
+    color: #303030; 
+    font-weight: 600; 
+    font-size: 1.1rem;
+    background-color: #D9D9D9;
+    position: absolute;
+    transform: translate(-6rem, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width: 6rem;
+  }
+
+  .annotationlong{
+    font-family: poppins, medium, sans-serif; 
+    color: #303030; 
+    font-weight: 600; 
+    font-size: 1.1rem;
+    background-color: #D9D9D9;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width: 10rem;
+  }
+
+  .altannotationlong{
+    font-family: poppins, medium, sans-serif; 
+    color: #303030; 
+    font-weight: 600; 
+    font-size: 1.1rem;
+    background-color: #D9D9D9;
+    position: absolute;
+    transform: translate(-10rem, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    width: 10rem;
+  }
+  
+  :not(:defined) > * {
+    display: none;
+  }
+
+  .parallax {
+    background-image: url("/images/parallax3.jpg");
+    min-height: 17rem; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 6rem;
+  }
+
+  .parallax2 {
+    background-image: url("/images/parallax.jpg");
+    min-height: 14rem; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 6rem;
+  }
+
+  .parallax3 {
+    background-image: url("/images/parallax2.jpg");
+    min-height: 20rem; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 6rem;
+  }
+
+  .thebuildwrapper {
+    border: 1px solid black;
+    height: 45rem;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .thebuildwrapper > div {
+    width: 100rem;
+    margin: 1rem;
+  }
+
+  .sidebaritems {
+    background-color: #F0F0F0;
+  }
+
+  .accordian-items {
+    background-color: #F0F0F0;
+  }
+
+  .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: #DA3A57;
+  }
+
+  .accordion {
+    --bs-accordion-border-color: #DA3A57;
+  }
+  
+  .bsb .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: #419D45;
+  }
+
+  .bsb .accordion-button {
+    z-index: 3;
+    outline: 0;
+    box-shadow: #419D45;
+  }
+
+  .accordion .bsb {
+    --bs-accordion-color: #303030;
+    --bs-accordion-bg: #F0F0F0;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 102, 0, 0.25);
+    --bs-accordion-border-color: #419D45;
+    --bs-accordion-btn-color: #303030;
+    --bs-accordion-btn-bg: #F0F0F0;
+    --bs-accordion-active-color: none;
+    --bs-accordion-active-bg: none;
+  }
+
+  .accordion {
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.25);
+  }
+
+  .sidebarlinks {
+    text-decoration: none;
+    color: #303030;
+  }
+
+  .sidebarlinksbsb {
+    text-decoration: none;
+    color: #303030;
+  }
+
+  .sidebarlinks:hover {
+    text-decoration: none;
+    color: #DA3A57;
+  }
+
+ .sidebarlinksbsb:hover {
+    text-decoration: none;
+    color: #419D45;
+  }
+
+  .accordion-item .bsb {
+    border: var(--bs-accordion-border-width) solid #419d45;
+    background-color: #F0F0F0;
+  }
+
+  h1 {
+    font-family: poppins, medium, sans-serif;
+    color: #303030;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-family: poppins, medium, sans-serif;
+    color: #303030;
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    color: #303030;
+    font-family: poppins, medium, sans-serif;
+  }
+
+  p {
+    font-family: poppins, medium, sans-serif;
+    color: #303030;
+    font-size: medium;
+    line-height: 2rem;
+  }
+
+  .picturescontainer {
+    display: flex;
+    padding: 1rem 0 2rem 0;
+  }
+
+  .pictures {
+    height: 20rem;
+    width: auto;
+  }
+
+  .bulletpoints {
+    list-style-position: outside;
+    line-height: 2rem;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  model-viewer, #home1 {
+    height: 80vh;
+    width: 60%;
+    position: absolute;
+    left: 0%;
+    top: 5rem;
+}
+
+model-viewer, #home2 {
+    height: 180vh;
+    width: 60%;
+    position: absolute;
+    top: 30rem;
+    left: 60%;
+}
+
+model-viewer, #mbalpha {
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  left: 25%;
+  top: -11rem;
+  z-index: 2;
+}
+
+model-viewer, #gpualpha {
+  height: 80vh;
+  width: 85%;
+  position: absolute;
+  left: 35%;
+  top: -11rem;
+  z-index: 2;
+}
+
+model-viewer, #cpualpha {
+  height: 60vh;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+}
+
+.gridimage {
+    height: 100%;
+    width: 70%;
+    padding-top: 4rem;
+}
+
+.gridimage2 {
+    height: 60%;
+    width: 30%;
+    padding-top: 4rem;
+}
+
+.xscroll {
+  margin: 1rem, 1rem;
+  padding: 1rem;
+  background-color: #F0F0F0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 55rem;
+  overflow-y: visible;
+  border: #419D45 solid 0.1rem;
+}
+
+.guideblock {
+  padding: 2rem;
+  white-space: normal;
+  height: 100rem;
+  font-family: poppins, medium, sans-serif;
+}
+
+.guideblock2 {
+  padding: 2rem;
+  white-space: normal;
+  font-family: poppins, medium, sans-serif;
+}
+
+.guideheader {
+  text-align: center;
+  padding-top: 4.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.guideheader2 {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.caroimages {
+  height: 50rem; 
+  width: auto;
+}
+
+h5 {
+  font-family: poppins, medium, sans-serif;
+  color: #303030;
+  font-size: 2rem;
+}
+
+.gridimage3 {
+  height: 12rem;
+  width: auto;
+  padding-top: 4rem;
+}

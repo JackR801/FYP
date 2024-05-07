@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--
+    <link rel="stylesheet" href="/src/jquery.mCustomScrollbar.css" />
+    -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--
+    <script src="/path/to/jquery.mCustomScrollbar.concat.min.js"></script>
+    -->
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script defer src="script.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="/src/styles.css">
+
+    <title>FYP</title>
+  </head>
+
+
+
+  <body class="container" id="content1">
+
+    <div class="spinner-wrapper">
+      <div class="spinner-border spinner2" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p style="position: absolute; top: 58%; margin: 0 auto; font-size: 2rem; color: #DA3A57; text-align: center;">RGB Lights are always optional</p>
+    </div>
+
+    <nav class="navbar w-100 z-3" style="background-color: transparent; padding-bottom: 8rem;">
+        <div class="container-fluid">
+          <div class="container">
+  
+          <a class="ms-auto navbar-brand" href="index.html">
+            <img src="/images/logo.png" alt="Logo" width="105" height="110" padding="0px">
+          </a>
+    
+          <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 25%; font-family: poppins, medium, sans-serif; color: #303030; z-index: 15;">
+          <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Parts</a>
+            <ul class="dropdown-menu z-160">
+              <li><a class="dropdown-item" href="motherboard.html" style="color: #DA3A57;">Motherboard</a></li>
+              <li><a class="dropdown-item" href="gpu.html">GPU</a></li>
+              <li><a class="dropdown-item" href="cpu.html">CPU</a></li>
+              <li><a class="dropdown-item" href="pccase.html">PC Cases</a></li>
+              <li><a class="dropdown-item" href="#">RAM</a></li>
+              <li><a class="dropdown-item" href="#">Storage</a></li>
+              <li><a class="dropdown-item" href="#">Cooling Systems</a></li>
+              <li><a class="dropdown-item" href="#">Power Source Unit</a></li>
+              <li><a class="dropdown-item" href="#">RGB Lights</a></li>
+            </ul>
+            </ul>
+          </div>
+  
+          <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 10%; font-family: poppins, medium, sans-serif; color: #303030;">
+          <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+            <a class="navbarfont nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">How to Build</a>
+              <ul class="test dropdown-menu">
+                <li><a class="dropdown-item" href="budgetpc.html">Budget PC Guide</a></li>
+                <li><a class="dropdown-item" href="modernpc.html">Modern PC Guide</a></li>
+                <li><a class="dropdown-item" href="propc.html">Professional PC Guide</a></li>
+              </ul>
+            </ul>
+          </div>
+  
+        </div>
+        </div>
+      </nav>
+
+
+
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-3 sticky-top" style="padding: 2rem 2rem 5rem 0; display: block;">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style="background-color: #F0F0F0;">
+                      Table of Contents
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                        <!-- this feature was depricated <il><a class="sidebarlinks" href="#content1">Top of Page</a></il><br> -->
+                        <il><a class="sidebarlinks" href="#content2">What is a Motherboard?</a></il><br>
+                        <il><a class="sidebarlinks" href="#content3">Who makes Motherboards?</a></il><br>
+                        <il><a class="sidebarlinks" href="#content4">Manufacturers</a></il><br>
+                        <il><a class="sidebarlinks" href="#content5">Different Types of Motherboards</a></il><br>
+                        <il><a class="sidebarlinks" href="#content6">Price</a></il><br>
+                        <il><a class="sidebarlinks" href="#content7">Other Bits</a></il>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style="background-color: #F0F0F0;">
+                      Parts
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                            <il class="sidebaritemsli"><a class="sidebarlinks" href="#" style="color: #DA3A57;">Motherboard</a></il><br>
+                            <il><a class="sidebarlinks" href="gpu.html">Graphics Card</a></il><br>
+                            <il><a class="sidebarlinks" href="cpu.html">CPU</a></il><br>
+                            <il><a class="sidebarlinks" href="pccase.html">PC Cases</a></il><br>
+                            <il><a class="sidebarlinks" href="#">RAM</a></il><br>
+                            <il><a class="sidebarlinks" href="#">Storage</a></il>
+                            <il><a class="sidebarlinks" href="#">Cooling Systems</a></il><br>
+                            <il><a class="sidebarlinks" href="#">Power Source Unit</a></il><br>
+                            <il><a class="sidebarlinks" href="#">RGB</a></il>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style="background-color: #F0F0F0;">
+                      How to Build Guides
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                            <il class="sidebaritemsli"><a class="sidebarlinks" href="budgetpc.html">Budget PC Guide</a></il><br>
+                            <il><a class="sidebarlinks" href="modernpc.html">Modern PC Guide</a></il><br>
+                            <il><a class="sidebarlinks" href="propc.html">Professional PC Guide</a></il><br>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="col-9" style="padding-top: 2rem; padding-bottom: 10rem; ">
+
+            <section style="position: relative;">
+
+              <div>
+                <model-viewer 
+                      
+                id="mbalpha"
+                ar 
+                ar-modes="webxr"
+                auto-rotate
+                camera-controls
+                touch-action="pan-y"
+                camera-orbit="35deg 75deg 20m"
+                loading="eager"
+                disable-zoom
+                alt="A Gaming PC 3D Model"
+                shadow-intensity="1"
+                src="/models/motherboard__components.glb">
+  
+                <button class="hotspot" slot="hotspot-mb1" data-visibility-attribute="visible" data-position="0.67 1.9 -8" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="altannotation">CPU</div>
+                </button>
+  
+                <button class="hotspot" slot="hotspot-mb2" data-visibility-attribute="visible" data-position="2.7 3.2 -6.8" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="annotation">RAM</div>
+                </button>
+  
+                <button class="hotspot" slot="hotspot-mb3" data-visibility-attribute="visible" data-position="-0.5 -0.3 -7.7" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="altannotation">M.2 SSD</div>
+                </button>
+  
+                <button class="hotspot" slot="hotspot-mb4" data-visibility-attribute="visible" data-position="0.7 -1 -7.7" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="annotationlong">PCI Express 3.0 x16 slot</div>
+                </button>
+  
+                <button class="hotspot" slot="hotspot-mb5" data-visibility-attribute="visible" data-position="0.7 -2.85 -7.7" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="altannotationlong">PCI Express 3.0 x16 slot</div>
+                </button>
+  
+                <button class="hotspot" slot="hotspot-mb6" data-visibility-attribute="visible" data-position="4 -2.85 -7.7" data-normal="0.00045857m -2.5997957m 5m">
+                  <div class="annotationlong">SATA Connectors</div>
+                </button>
+  
+                </model-viewer>
+              </div>
+
+            <h1 style="padding-top: 26rem;">Motherboards</h1>
+
+            <div style="padding-top: 2rem; font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+              <div style="width: 45%;">
+            <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+              Motherboards are circuit boards that distribute electricity and provide communication links to all components of your PC. They can vary in both </p></div><p style="margin-top: -1rem;">colours and sizes. When building a PC, motherboards  are the base of all your components- almost all components slot into the motherboard in one way or another (GPU, CPU, RAM, SSD, etc.) and the rest are plugged in using the relevant cables. Motherboards are held upright in the PC Case using struts, these struts are set into the inner back of the PC Case.
+              <br><br>
+              While motherboards are typically built with certain slots, sockets and functions as standard, some boards market themselves on built in RGB, extra slots for storage or extra PCLE-slots, or some have more updated designs such as DDR5 RAM compatability, etc.
+              <br><br>
+              </p></div><p>Motherboards are one of the most crucial parts to a PC Build. Many parts revolve around the type of motherboard a user has- <strong>such as AMD and Intel CPU's only being compatible with certain motherboard CPU sockets,</strong> DDR4 ram being unsupported on DDR5 socket motherboards, etc. Find out more below in <a href="#content5" style="color: #DA3A57;">different types of motherboards</a> and <a href="#content7" style="color: #DA3A57;">other bits</a> 
+              <br><br>
+              On top of this, there are motherboards in all kinds of shapes, sizes, socket types and brands. <strong>Many motherboards come in the form factors of M-ATX (small), ATX (shown above) and ITX (or Micro-ITX)- all of which correspond to the motherboards physical size which can cause problems when in relation to the size of your PC case if not planned for.</strong> As well as this, different motherboard types offer different pros and cons which you can find below in <a href="#content5" style="color: #DA3A57;">different types of motherboards</a> different brand and practices leaves no two motherboards the same all the way down to installation- in which many companies expect users to refer to their products specific instruction manual over all else.
+            </p>
+
+
+
+          <div class="picturescontainer">
+            <div>
+              <img class="img-fluid" src="/images/10247036.webp">
+            </div>
+            <div>
+              <img class="img-fluid" src="/images/Picture-of-a-motherboard.jpg">
+            </div>
+          </div>
+
+        </section>
+
+          <h2><a id="content2">What is a Motherboard?</a></h2>
+          <div style="float: right;" class="sketchfab-embed-wrapper"> <iframe title="Motherboard mATX" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="300" height="400" src="https://sketchfab.com/models/4cec4b403f5b41e89690c000553c43bb/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+          <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+            A motherboard (mainboard, main circuit board, MB, mboard, backplane board, base board, system board, mobo, or, in Apple computers, logic board) is the main printed circuit board (PCB) in general-purpose computers and other expandable systems. It holds and allows communication between many of the crucial electronic components of a system, such as the central processing unit (CPU) and memory, and provides connectors for other peripherals. Unlike a backplane, a motherboard usually contains significant sub-systems, such as the central processor, the chipset's input/output and memory controllers, interface connectors, and other components integrated for general use.
+            <br><br>
+            Motherboard means specifically a PCB with expansion capabilities. As the name suggests, this board is often referred to as the mother of all components attached to it, which often include peripherals, interface cards, and daughterboards: sound cards, video cards, network cards, host bus adapters, TV tuner cards, IEEE 1394 cards, and a variety of other custom components. 
+            <br><br>
+            Similarly, the term mainboard describes a device with a single board and no additional expansions or capability, such as controlling boards in laser printers, television sets, washing machines, mobile phones, and other embedded systems with limited expansion abilities.
+            <br><br>
+          </p>
+
+
+
+          <div style="display: flex;">
+            <div style="width: 190%; padding-top: 8rem;">
+                <img style="height: auto; width: 100%;" src="/images/anatomy-of-computer-motherboard.jpg">
+            </div>
+
+            <div style="padding: 3rem 2rem;">
+              <p>
+                Motherboards mainly comprise of a main CPU Socket typically found in the upper middle of the board for your CPU, along with DIMM Slots for RAM to the right of this, VRM's both above and below the CPU Socket, I/O Ports to the far left of the CPU Socket which hold your USB, HDMI, DisplayPort and audio in & out jacks as well as any other slots your motherboard comes equipped with.
+                <br><br>
+                M.2 Slots are below the CPU socket for SSD's, and below this is the PCle x16 Slot for your GPU. As well as this you will also find headers for USB's, SATA Ports for Storage, a System Panel Header for your cases front-end buttons and sockets (On Button), HD Audio Headers, a CMOS Battery (used for internal memory such as keeping the time during power off), the CPU Power Connector, the Motherboard Power Connector and the fan headers for fans.
+              </p>
+            </div>
+
+          </div>
+
+
+
+          <h2 id="content3">Who makes Motherboards?</h2>
+          <div style="display: flex;">
+            <div style="width: 30%;">
+              <p>Some manufacturers include:</p>
+              <ul class="bulletpoints">
+                <li><a style="color: #DA3A57;" href="https://www.asus.com/ie/">Asus</a></li>
+                <li><a style="color: #DA3A57;" href="https://store.acer.com/en-ie/">Acer</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.asrock.com/index.us.asp">ASRock</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.biostar.com.tw/app/en/">Biostar</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.dell.com/en-ie">Dell</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.gigabyte.com/">Gigabyte</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.msi.com/index.php">Msi</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.amd.com/en.html">AMD</a></li>
+                <li><a style="color: #DA3A57;" href="https://www.evga.com/">EVGA</a></li>
+                <li><a style="color: #DA3A57;" href="https://nzxt.com/">NZXT</a></li>
+              </ul>
+            </div>
+
+            <div style="width: 70%;">
+
+                <!--
+
+                  <div class="container text-center">
+                    <div class="row">
+                      <div>
+                        <a href="https://www.asus.com/ie/"><img class="gridimage" src="/images/424_asus.jpg"></a>
+                      </div>
+                      <div>
+                        <a><img class="gridimage" src="/images/Acer-Logo.png"></a>
+                      </div>
+                      <div>
+                        <a><img class="gridimage" src="/images/ASRock-logo.png"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                -->
+
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <a href="https://www.asus.com/ie/"><img class="gridimage" src="/images/424_asus.jpg"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://store.acer.com/en-ie/"><img class="gridimage" src="/images/Acer-Logo.png"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.asrock.com/index.us.asp"><img class="gridimage" src="/images/ASRock-logo.png"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.biostar.com.tw/app/en/"><img class="gridimage" src="/images/biostar5003.jpg"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <a href="https://www.dell.com/en-ie"><img class="gridimage" src="/images/Dell_Logo.svg.png"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.gigabyte.com/"><img class="gridimage" src="/images/877_gigabyt.jpg"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.msi.com/index.php"><img class="gridimage" src="/images/il_570xN.2384952013_6bqf.webp"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.amd.com/en.html"><img class="gridimage" src="/images/il_570xN.2408810313_kqb8.webp"></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container text-center" style="padding-top: 2rem;">
+                    <div class="row">
+                      <div class="col">
+                        <a href="https://www.evga.com/"><img class="gridimage2" src="/images/Untitled.png"></a>
+                      </div>
+                      <div class="col">
+                        <a href="https://nzxt.com/"><img class="gridimage2" src="/images/Untitled2.png"></a>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+                
+          </div>
+
+
+          
+          <section>
+
+              <div class="accordion" id="accordionPanelsStayOpenmb">
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header">
+                    <button style="background-color: #F0F0F0;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOnemb" aria-expanded="true" aria-controls="panelsStayOpen-collapseOnemb">
+                      <h4 id="content4">Manufacturers</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOnemb" class="accordion-collapse collapse show">
+                    <div class="accordion-body .accordianitems mCustomScrollbar" data-mcs-theme="rounded-dots" style="overflow: auto; height: 40rem;">
+                      
+                      <p>
+                        <h2>ASUS</h2><br><br>
+                        
+ASUS is a Taiwanese multinational computer and phone hardware company. Some of the leading products produced by ASUS are desktops, motherboards, tablets, PC storage, graphics cards, servers, workstations, WiFi routers, peripherals, etc. As for motherboards, Asus has the most famous ones, which are well-known for their high performance and design.<br><br>
+
+<div style="float: right;"><div class="sketchfab-embed-wrapper"> <iframe title="Asus ROG Maximus Z690" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="340" height="280" src="https://sketchfab.com/models/ec5b25c21760422f974aab8085674667/embed?autospin=1&autostart=1&camera=0&transparent=1&ui_hint=0&dnt=1"> </iframe> </div></div>
+
+Asus motherboards are by far the best option if you want a motherboard with high-end performance and good RGB software. Asus motherboards provide value for money without excessive overload.<br><br>
+
+The only problem you may face with Asus motherboards is the high price range. They are rather expensive, and not everyone can afford them. Other than the unreachable price range, Asus motherboards are very well-reputed and live up to the name of the best motherboard brand.<br><br>
+
+<strong>Famous Asus Motherboards</strong><br><br>
+
+Some of the most famous Asus motherboards are<br><br>
+
+    ASUS ROG Strix Z690-E<br>
+    Asus ROG Strix X670E-E Gaming<br>
+    ASUS ROG Maximus Z790 Hero<br>
+     Asus ROG Crosshair X670E Hero<br>
+    ASUS TUF Gaming B650-PLUS<br>
+    Asus B550 ROG Strix B550-F Gaming<br>
+    Asus Prime Z790<br><br>
+
+<h2>MSI</h2><br><br>
+
+Micro-star International is a Taiwan-based multinational information technology corporation based in Taipei, Taiwan, founded in 1986. The main products of MSI include motherboards, graphic cards, servers, industrial computers, PC peripherals, laptops, and many more.<br><br>
+
+<div style="float: left; padding-right: 1rem;"><div class="sketchfab-embed-wrapper"> <iframe title="MSI X370 GAMING PRO" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="340" height="280" src="https://sketchfab.com/models/e34058f4745a4170b21f716a53883361/embed?autospin=1&autostart=1&camera=0&ui_hint=0&dnt=1"> </iframe> </div></div>
+
+MSI is known for the variety of products it launches. All products range from top to bottom in the price range, making MSI have something for everyone. With that being said, it has motherboards of all price ranges and of all kinds.<br><br>
+
+MSI motherboards are well known for being high quality and outstanding stability, even for overclocking. In addition, MSI motherboards are known for having amazing power designs with solid and heavy heatsinks.<br><br>
+
+However, all these features may not be available on lower-range motherboards. So you might want to buy motherboards from the higher range. Similar to Asus motherboards, MSI motherboards, which are in the high price range, maybe too pricey. As much as it is recommended to buy the high price range motherboards, it is also considered that those would not be budget-friendly. The high price range for the best motherboards is the only disadvantage of MSI. Otherwise, MSI is also ranked on the list of the best motherboard brands.<br><br>
+
+<strong>Famous MSI Motherboards</strong><br><br>
+
+These MSI motherboards are ranked from the highest to lowest price ranges<br><br>
+
+    MSI MPG Z690 Carbon<br>
+    MSI MEG Z790 Ace<br>
+    MSI MEG Z790 Ace<br>
+    MSI Pro B650-P<br>
+    MSI MPG Z590 Gaming Carbon<br>
+    MSI MPG B650I Edge<br><br>
+
+<h2>AS Rock</h2> <br><br>
+
+ASRock is a Taiwan-based company that is known for the development of motherboards and industrial PCs. Current production of ASRock includes motherboards, workstations, and servers. ASRock has distributions in more than 90 countries, making it the world’s 3rd largest motherboard manufacturer. <br><br>
+
+<div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div>
+
+ASRock is known for its strong performance, great value, and for being light on the budget. Most ASRock motherboards are affordable. In addition, ASRock also provides quick BIOS updates and is quite reliable. <br><br>
+
+The only downside of ASRock motherboards is the terrible RGB software. The software is considered disappointing regarding its powerful performance and other features. However, other than this, ASRock motherboards are considered one of the best motherboards. <br><br>
+
+<strong>Famous ASRock motherboards</strong><br><br>
+
+Some of the most famous ASRock motherboards are <br><br>
+
+    ASRock Z790 Taichi<br>
+    ASRock X570 Phantom Gaming X <br>
+    ASRock Z790 LiveMixer<br>
+    ASRock WRX80 Creator<br>
+    ASRock B650E Steel Legend WiFi<br>
+    ASRock B650E PG-ITX<br><br>
+
+<h2>Gigabyte Technology</h2><br><br>
+
+Gigabyte Technology is also a Taiwan-based company that manufactures computer hardware. Some of the most well-known hardware by gigabyte technology are motherboards, laptops, personal digital assistants, keyboards, server racks, graphic cards, and more. <br><br>
+
+Gigabyte technology motherboards are some of the most well-known and reputable motherboards in the market. Their motherboards only provide quality performance and are rich with positive reviews. One plus point of gigabyte motherboards is how they keep introducing new features for their motherboards, such as RGB lighting and cooling support. On top of that, they have a wide range of motherboards for all kinds of users, including high-end to low-end motherboards and workstation motherboards. <br><br>
+
+Gigabyte motherboards have lived up to their name by being one of the most famous motherboards and by ranking on the list of the best motherboard brands. Gigabyte motherboards are durable and have excellent performance, making them suitable for gaming and high-load work. <br><br>
+
+As for the price, Gigabyte motherboards are not too expensive. However, the higher and better motherboards can be harsh on budget. Otherwise, Gigabyte motherboards are one of the best options for a motherboard. <br><br>
+
+<strong>Famous Gigabyte motherboards</strong><br><br>
+
+Some of the most famous gigabyte motherboards are<br><br>
+
+    Gigabyte Z790 Aorus Master<br>
+    Gigabyte Z690 Aorus Ultra<br>
+    GIGABYTE B760 AORUS Elite AX<br>
+    Gigabyte Z590 AORUS Elite AX<br>
+    Gigabyte B650I Aorus Ultra<br>
+    Gigabyte Z790 Aorus Master<br><br>
+
+<h2>Biostar</h2><br><br>
+
+Another Taiwanese company, Biostar, based in Taipei, is on the list of the best motherboard brands. Biostar produces video cards’ GPU and memory. It is well known for making motherboards and gaming motherboards, industrial computing systems, SSD, graphics cards, healthcare solutions, and motor start batteries. <br><br>
+
+Biostar has made its name in the leading motherboard list by having affordable and decent-performance motherboards. Biostar motherboards are known to have great speed and efficiency. These might not be the best motherboards out there, but they are perfect for low-end computers used for activities such as gaming, daily browsing, and video editing. <br><br>
+
+Biostar motherboards are mainly for low-end computers and can be used as a replacement for many computers that are only used for light activities. So, these can also be called budget motherboards. <br><br>
+
+If you are looking for motherboards for heavy work then these motherboards are not for you. Biostar does not make any premium motherboards so it is not advised to buy them if you have a high-end computer. However, if you’re looking for a budget motherboard for low-end computer activities then these are for you. <br><br>
+
+<strong>Famous Biostar motherboards</strong><br><br>
+
+Top Biostar motherboards, according to Biostar itself, are<br><br>
+
+    Z790A-SILVER. Intel Z790<br>
+    B760T-SILVER. Intel B760<br>
+    B760M-SILVER. Intel B760<br>
+    B760A-SILVER. Intel B760<br>
+    B760MX2-E PRO D4. Intel B760<br>
+    B760MXC PRO 2.0. Intel B760<br>
+    B760MXC PRO. Intel B760<br>
+    B760NH-E. Intel B760<br><br>
+
+<h2>Intel</h2><br><br>
+
+The first American Multinational corporation on the list, Intel, is headquartered in Santa Clara, California, in Silicon Valley. Intel is considered one of the biggest semiconductor companies in the world. <br><br>
+
+Intel is known for developing microprocessors which are used in most of the world’s personal computers. Intel chips are known as the most complex devices. Intel motherboards are also known as the best motherboard brand. Other than motherboards, intel is famous for many of its other manufactures such as flash memory, motherboard chipsets, graphic cards and many more. <br><br>
+
+Intel’s motherboards are the best worldwide but are very expensive making them hard to reach for many. However, considering its popularity and features, it is worth every penny spent on it. <br><br>
+
+<strong>Famous Intel motherboards </strong><br><br>
+
+Some of the latest and most popular Intel motherboards are<br><br>
+
+    MSI MPG Z790 Edge WiFi<br>
+    GIGABYTE B760 AORUS Elite AX<br>
+    ASUS ROG Maximus Z790 Hero<br>
+    EVGA Z790 <br>
+    ASRock Z790 PG-ITX<br>
+    ASUS ROG Strix Z790-E <br>
+    EVGA Z790 DARK<br><br>
+
+<h2>HP</h2><br><br>
+
+The Hewlett-Packard Company is an American information technology company headquartered in California. HP is most commonly known for developing personal computers, and for printing solutions along with technology products and software. <br><br>
+
+HP does produce good motherboards which can work for high-end computers but more damage has been reported in HP motherboards. However, Hp does provide a 12-month warranty on their motherboards. HP motherboards are also not too expensive and are affordable for many, but are not too great in the long run. Overall, HP motherboards are a good buy, which is why they are included in the list of the best motherboard brands. <br><br>
+
+<strong>Famous HP motherboards </strong><br><br>
+
+    HP 586968-001 <br>
+    HP P7-1100 Hibiscus AMD Desktop<br>
+    HP Omen Oassi OC RKL-S Z590 30L<br>
+    HP Compaq Elite 8200 Slim SFF<br><br>
+
+<h2>Dell</h2>
+
+The second American company on the list, Dell, is one of the largest tech companies in the world, headquartered in Round Rock, texas. Dell is known for manufacturing motherboards, network servers, data storage solutions, and more. <br><br>
+
+Dell motherboards are especially good and are known for being able to last for 20 years or more. Dell motherboards are known for having many features which outrun some of the famous motherboard brands such as HP. Even for its low-end motherboards, Dell is known for providing excellent performance. So, it is not a question of why Dell ranks as one of the best motherboard brands. <br><br>
+
+No specific downsides can be seen in Dell motherboards other than high price range for the high-end motherboards, which is not likely as many of its high-end motherboards are not too expensive. <br><br>
+
+<strong>Famous Dell motherboards</strong><br><br>
+
+Some of the most famous Dell motherboards are <br><br>
+
+    Dell Studio XPS 8900 <br>
+    Dell Latitude E5470<br>
+    Dell Inspiron 3650 Intel H110 Chipset<br>
+    Dell OptiPlex 9010 <br>
+    Dell Optiplex 9020 MT Mini Tower 4<br>
+    NW73C Dell Studio XPS 8500 <br><br>
+
+<h2>Acer</h2><br><br>
+
+Another Taiwanese company, Acer, is not lagging behind on the list of the best motherboard brands. Founded in 1976 and headquartered in Taipei, Acer has made its name in the industry with its leading devices including motherboards, laptops, computers, and other electronic devices.<br><br> 
+
+Acer motherboards are very impressive regarding their considerable speed and quality performance. Acer motherboards are built with a hundred percent testing steps and are trustworthy. They perform well for high-end computers and do well in overclocking. <br><br>
+
+The only con would be the lack of slots, which shouldn’t be something to worry about too much as its other features make up for it. Other than that Acer motherboards are not too expensive but still have many impressive features. Considering all these perks, it is only fair if Acer motherboards are part of the best motherboard brands list. <br><br>
+
+<strong>Famous Acer motherboards</strong><br><br>
+
+Some of the most well-known Acer motherboards are <br><br>
+
+    Acer Predator G3610<br>
+    Acer Predator G3620<br>
+    Acer E946GZ<br>
+    Acer MCP73T-AD<br>
+    Acer M5100<br>
+    Acer F672CR<br><br>
+
+<h2>IBM</h2><br><br>
+
+Another American company, IBM, headquartered in New York, is making its way in the motherboard industry with its spectacular devices. IBM is well-known for its hardware, computer and networking equipment. <br><br>
+
+IBM motherboards are good enough to lead your PC, however, they lack in a few aspects. Other than that, IBM has proven itself by creating different motherboards for different needs. So, considering your needs you can pick the motherboard which best suits you. <br><br>
+
+IBM motherboards are not expensive compared to the other brands mentioned in this blog. IBM manufactures different motherboards at different prices so you can always pick the right one for yourself. <br><br>
+
+<strong>Famous Acer motherboards</strong><br><br>
+
+The most popular IBM motherboards with high compatibility and gaming are <br><br>
+
+     IBM Netvista 25090 <br>
+     IBM Genuine ThinkCentre M81<br>
+    IBM Planar System Board Dual E5-2600 <br><br>
+
+<h2>Conclusion</h2><br><br>
+
+Regardless of which motherboard is the best, you must opt for the one which best suits your needs. If you are looking for a motherboard for a high-end computer then Asus, MSI, and gigabyte technology are recommended, but that is if you can afford them. For a cheaper but high-quality option, IBM, Dell, and Biostar are recommended. Likewise, HP, Intel, and ASRock are very good options for high-end and low-end computers. <br><br>
+
+The perfect way to pick the right motherboard is by sorting out your priority needs and your budget. This way you will find the right motherboard in your set budget. <br><br>
+                      </p>
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header">
+                    <button style="background-color: #F0F0F0;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwomb" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwomb">
+                      <h4 id="content5">Different Types of Motherboards</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwomb" class="accordion-collapse collapse">
+                    <div class="accordion-body" style="overflow: auto; height: 40rem;">
+                      <p>
+                        One of the first an most important things to check when buying a motherboard, or inversely a CPU, RAM kit or PC Case, is to <strong>make sure that the CPU socket and other connectors in the motherboard are compatable with the CPU and other parts you plan to use with it.</strong> Which brings us to some of the first choices a PC builder must make- Intel or AMD?<br><br>
+
+                        <h2>Who is AMD and Intel?</h2><br><br>
+
+                        AMD and Intel are two of the most iconic names in PC building, and for good reason. For decades, they’ve been duking it out to offer the fastest, most capable, and most feature-rich processors (CPU's) for gamers, casual web browsers, and professionals alike. They’ve gone back and forth a few times over the years, with AMD launching groundbreaking designs and Intel responding with revolutionary chips of its own, but what has this to do with motherboards?<br><br>
+
+                        Motherboards are built with certain types of CPU's in mind- and both Intel and AMD have their own propriatory CPU socket designs- AMD use AM4 and AM5 (and many more) while Intel use LGA 1700 (and also many more) for certain CPU's. You have a 13th generation Intel i5 CPU (more found in our <a href="cpu.html" style="color: #DA3A57;">CPU parts page</a>)? Then you need a motherboard with an LGA 1700 CPU socket! Confusing? Very much so, but thats where the internet comes in to help.<br><br>
+
+                        <h2>PC Part Picker</h2><br><br>
+
+                        <a href="https://pcpartpicker.com/" style="color: #DA3A57;">PC Part Picker</a> is a website that allows users to make a list of their PC parts they want to build with while the website scans and checks for possible incompatable parts and flags it to you- or actively does not suggest parts that are incompatable. Before building your PC, it is <strong>strongly recommended</strong> whether you are new or a pro to check PC Part Picker for possible issues with your build down the line. This helps you to nullify the odds of buying a motherboard and finding out that your CPU is incompatable, or that your case is too big, or you rpower source is too weak, etc.<br><br>
+
+                        That being said, what actually is a cpu socket?<br><br>
+
+                        <h2>CPU Socket</h2><br><br>
+
+                        A socket is the array of pins and the securing mechanism that hold a processor in place and connect the motherboard to the available processing power. There are different sockets depending on what generation CPU is supported. If a situation should occur where the CPU and socket aren't compatible, the best case scenario is that the component won't physically be able to connect with the socket, while the worst case may be irreparable damage to either system part.<br><br>
+
+                        Luckily, it's easy to figure out and check whether or not a CPU you're looking at will work with a specific motherboard. Usually, it's recommended to choose the CPU first, which provides you with the socket it requires, making buying a motherboard that little bit simpler. For example, a new Ryzen 5 3600X will require an AM4 motherboard, while an Intel Core i5-9600K will need one with LGA 1151.<br><br>
+
+                        So the sockets on motherboards differentiate the CPU you can combine with them, if you havent already checked PC Part Picker you may be wondering what else can differentiate a motherboard from others:<br><br>
+
+                        <h2>RAM Slots</h2><br><br>
+
+                        RAM slots are often found in pairs and are sometimes color-coded for identification. We should note that RAM slots in a desktop look different than RAM slots in a laptop. A RAM module is rectangular and has a connector on one of the long sides. <br><br>
+
+                        Typically, motherboards have a total of 4 RAM slots or two pairs when they are dual-channel. Some high-end motherboards may contain as many as eight slots, and in supercomputers, there may be multiple motherboards per system, up to 32 slots total (more in our<a href="ram.html" style="color: #DA3A57;">RAM parts page</a>).<br><br>
+
+                        DDR5 has a different pin layout than DDR4 motherboard. Both modules have key notches to lock them in place in the motherboard’s DIMM slot, but the pin layout on a DDR5 RAM module is different compared to a DDR4 module. The key notch locations on both RAM sticks look very similar at first glance, but if you stack them side by side, you will notice that the key notch on the DDR5 module is positioned more to the left, while the DDR4 is more to the right. <strong>This means if you plan to use DDR5 RAM, you need a motherboard with DDR5 Slots</strong> similar to the CPU socket.<br><br>
+
+                        This can also be checked in advance in PC Part Picker.<br><br>
+
+                        <h2>Sata or SSD</h2><br><br>
+
+                        When considering buying a motherboard you may to need consider the number of SATA ports you’ll need, SATA is a form of hardrive storage. Each SATA port allows you to connect an optical drive and storage drives, like a SSD or HDD. So it’s important to make sure your motherboard has all the SATA ports you need for all of your drives. It is also worth noting that you need to make sure your motherboard offers the SATA 6 gigabytes standard, which is also known as SATA 3.0. Furthermore, you might need to consider peripheral connections, for example a USB 3.0.<br><br>
+
+                        <h2>Other features</h2><br><br>
+
+                        If you buy a motherboard with features already built in, you don’t have to worry about buying additional expansion cards. A more common feature which is usual included on the majority of motherboards is on-board audio. However this is usually only suitable for mid-range speakers. It <strong>is worth noting that better motherboards often bundle Wi-Fi and Bluetooth features as well</strong> (yes your PC does not come equipped with the ability to connect to the internet immediately! Many motherboards offer external antenna's for this or specifically have this built in), but you’ll have to spend more cash for these features. Nevertheless they will reduce the need for expansion cards.<br><br>
+
+                        and last but certainly not least.<br><br>
+
+                        <h2>Form Factor</h2>
+
+                        Initially you’ll need to select a form factor. ATX motherboards are common, as is micro ATX (although these are smaller in size and reduce the number of expansions slots). When you’re buying a new motherboard and not sure what size will fit, you can always measure your old motherboard and compare it with different sizes. The ATX board is popular, as it has the addition of more expansion slots, which can be useful.<br><br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header">
+                    <button style="background-color: #F0F0F0;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThreemb" aria-expanded="false" aria-controls="panelsStayOpen-collapseThreemb">
+                      <h4 id="content6">Price</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThreemb" class="accordion-collapse collapse">
+                    <div class="accordion-body" style="overflow: auto; height: 40rem;">
+                      <p>
+                        <h2>Why you don't need an expensive motherboard- but don't buy just any motherboard!</h2><br><br>
+
+                        There was a time when your choice of motherboard could have a heavy toll on your PC's performance, but these days, the actual difference is almost non-existent unless you go really low-end.<br><br>
+
+                        We first need to examine why these motherboards are so expensive in the first place. The short story is, while a lot of it is just branding and hype, expensive motherboards do have a few legitimate advantages.<br><br>
+
+                        For one, expensive motherboards will almost always throw in everything and the kitchen sink. This means that you'll often see features and motherboard parts like Thunderbolt 4, PCIe Gen 5 ports (both actual PCI Express slots and m.2 slots) all around, DDR5 RAM, several USB ports, Wi-Fi 6E, Bluetooth 5.2, and amazing onboard audio. The motherboard itself is also thicker and accommodates more complex PCB traces, in order to allow for faster connectivity all around the board. <br><br>
+
+                        Those things are neat, but you really don't need them. At least, not all of them. Still, for the right people, it has a few neat perks you can take advantage of. In the case of some ASUS ROG motherboards, you have something called "DIMM.2," which gives you an extra DIMM slot (not compatible with RAM) that can be used for extra m.2 NVMe SSDs thanks to a special adapter. <br><br>
+
+                        There's no need to match your high-end CPU with an equally expensive motherboard. As long as it has reliable VRMs and connectivity, you'll do well. The technical differences between B660 and Z690 motherboards in the case of Intel or B550 and X570 motherboards in the case of AMD come down to the higher-end chipsets supporting more PCIe Gen 5/4 lanes and overclocking support. That's pretty much it. You won't see a performance drop running your Core i9 or Ryzen 9 on a lower-end chipset. <br><br>
+
+                        Most features you want to care about will come from your actual motherboard choice or manufacturer rather than your chipset. In fact, as a good rule of thumb, if you're given the choice, it's actually better to buy a good B660/B550 motherboard than a cheaper Z690/X570 motherboard. You'll likely have a better and more stable experience with the lower-end chipset in those scenarios. <br><br>
+
+                        While spending more money on your motherboard was once a worthwhile investment, nowadays the actual technical differences between most cheap and expensive motherboards mean that you can get away with a well-researched, cheaper option and have an experience that's 99% as good as the one you'll have with an expensive option.<br><br>
+
+                        Hopefully, you can now make a more educated purchase. <br><br>
+
+                        <h2>Should I buy second-hand?</h2>
+
+                        Motherboards have a lot of elements to them, from capacitors to chips, heatsinks, jumpers, and batteries. If any part were to fail, it's hard to predict what would happen. It might be completely fine, or the whole motherboard might just not work at all. Make sure the motherboard is in complete working order before you buy it. <br><br>
+
+                        <strong>Excercise extreme caution.</strong>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </section>
+
+
+
+          <h2 style="padding-top: 3rem;"><a id="content7">Other Bits</a></h2>
+          <p>
+            Since high speed CPU's generate a lot of heat, there are heat sinks and mounting points for fans right next to the CPU socket on the motherboard<br><br>
+
+            When building your PC, if you have and I/O or onn button + USB/Type C connectors on the front of your PC Case, you actually need to hook these up to your motherboard to even turn it on! However, holding a screwdriver on the I/O header pins found on the motherboard will also work to turn on the PC, as long as the Power is connected of course.<br><br>
+
+            Overclocking is when a user trys to unlock maximum performance of their PC while preventing damage to their hardware. It is discouraged for newcomers and is a skill reserved for experienced users as you’ll need to keep a close eye on your system and make sure your computer doesn’t begin to malfunction. In order to overclock in the first place, a PC must have an overclockable motherboard and CPU.<br><br>
+          </p>
+
+          <h2 style="text-align: center;">Test your Knowledge!</h2>
+
+          <div style="padding: 3rem 5rem;"><a data-quiz="QF8OAZ6LN" data-type=3 href="https://take.quiz-maker.com/QF8OAZ6LN" style="display:inline-block; text-align:left; margin:0 auto; width:100%; max-width:824px; box-sizing:border-box; text-decoration:none; padding:1em; border:1px solid #CCC; color:inherit;"><div style="display:inline-block; width:50%; vertical-align:top; box-sizing:border-box; padding:0 1em 0 0;"><span style="display:block; font-family:sans-serif; font-size:1.5em; line-height:40px; color:inherit;">Test your Motherboard Understanding</span><span style="display:inline-block; font-family:sans-serif; font-size:1em; margin-top:10px; line-height:1.5; color:inherit;">When ordering a motherboard, it's a good idea to do what first?, When installing a CPU in you rmotherboard, is the CPU:, Which one of these is not a motherboard size</span></div><div style="background:URL('http://www.quiz-maker.com/3012/CDN/101-4965661/a21.png?sz=1200-00000010981000005300') 0 50% / cover no-repeat; width:50%; background-clip:content-box; display:inline-block; box-sizing:border-box; padding:0 0 0 1em;"><img src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAAALAAAAAAEAAMAAAIDhI9WADs=" style="width:100%; opacity:0;"></div></a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script></div>
+
+        <img src="/images/0 z6DBs7FzNFcMLWiU.jpg" style="display: block; width: 100%; height: auto;">
+
+          </div>
+        </div>
+      </div>
+
+      <div style="background-image: linear-gradient(to top, rgba(249, 122, 115, 0.334), rgba(255,0,0,0)); height: 6rem; width: 200%; position: fixed; bottom: 0; left: -50%; z-index: 99;">
+      
+
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+
+
+      </div>
+      
+    
+  </body>
+  <footer style="width: 100%; height: 18rem; background-color: #DA3A57; position: absolute; left: 0; z-index: 98;">
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 8rem; left: 5%;" href="contact.html">Contact Me</a>
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 4rem; left: 5%;" href="references.html">Link to my Bibliography of references, research and sources</a>
+
+  </footer>
+
+  <a href="#"><img src="/images/pngwing.com.png" style="width: auto; height: 8%; position: fixed; bottom: 4rem; right: 6.5%; z-index: 100;"></a>
+  <div style="width: 4rem; height: 6rem; position: fixed; bottom: 3rem; right: 0; background-color: #FFFFFF; z-index: 97; padding: 3rem 6rem;"></div>
+
+
+</html>

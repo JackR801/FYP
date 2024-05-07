@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script defer src="script.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="/src/styles.css">
+
+    <title>PC Part Builder</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    <div class="spinner-wrapper">
+      <div class="spinner-border spinner" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p style="position: absolute; top: 58%; margin: 0 auto; font-size: 2rem; color: #71DAFB; text-align: center;">Everyone Starts Somewhere</p>
+    </div>
+
+    <nav class="navbar w-100 z-3" style="background-color: transparent;">
+      <div class="container-fluid">
+        <div class="container">
+
+        <a class="ms-auto navbar-brand" href="#" id="topofpage">
+          <img src="/images/logo.png" alt="Logo" width="105" height="110" padding="0px">
+        </a>
+  
+        <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 25%; font-family: poppins, medium, sans-serif; color: #303030; z-index: 5;">
+        <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Parts</a>
+          <ul class="dropdown-menu z-3">
+            <li><a class="dropdown-item" href="motherboard.html">Motherboard</a></li>
+            <li><a class="dropdown-item" href="gpu.html">GPU</a></li>
+            <li><a class="dropdown-item" href="cpu.html">CPU</a></li>
+            <li><a class="dropdown-item" href="pccase.html">PC Cases</a></li>
+            <li><a class="dropdown-item" href="#">RAM</a></li>
+            <li><a class="dropdown-item" href="#">Storage</a></li>
+            <li><a class="dropdown-item" href="#">Cooling Systems</a></li>
+            <li><a class="dropdown-item" href="#">Power Source Unit</a></li>
+            <li><a class="dropdown-item" href="#">RGB Lights</a></li>
+          </ul>
+          </ul>
+        </div>
+
+        <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 10%; font-family: poppins, medium, sans-serif; color: #303030;">
+        <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+          <a class="navbarfont nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">How to Build</a>
+            <ul class="test dropdown-menu">
+              <li><a class="dropdown-item" href="budgetpc.html">Budget PC Guide</a></li>
+              <li><a class="dropdown-item" href="modernpc.html">Modern PC Guide</a></li>
+              <li><a class="dropdown-item" href="propc.html">Professional PC Guide</a></li>
+            </ul>
+          </ul>
+        </div>
+
+      </div>
+      </div>
+    </nav>
+
+    
+
+    <div style="padding-bottom: 48rem;">
+
+      <model-viewer id="home1"
+      ar 
+      ar-modes="webxr"
+      auto-rotate
+      camera-controls
+      touch-action="pan-y"
+      camera-orbit="45deg 65deg 20m"
+      loading="eager"
+      disable-zoom
+      alt="A Gaming PC 3D Model"
+      shadow-intensity="1"
+      src="/models/FinalPcCase4.glb">
+
+      <button class="hotspot" slot="hotspot-motherboard" data-visibility-attribute="visible" data-position="-0.5 -1.7 -0.85" data-normal="0.00045857m -2.5997957m 5m">
+        <div class="altannotationlong">Motherboard</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-onoff" data-visibility-attribute="visible" data-position="3.3 2.8 -1.45" data-normal="16.045857m -2.5997957m 10m" data-target="-0.04384604m 0.07348397m -0.1213202m">
+        <div class="annotationlong">Front Panel (On/Off switch + ports)</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-airflow" data-visibility-attribute="visible" data-position="3.3 -1.5 -1" data-normal="16.045857m -2.5997957m 10m" data-target="-0.04384604m 0.07348397m -0.1213202m">
+        <div class="annotation">Air vent for Fans</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-gpu" data-visibility-attribute="visible" data-position="0.2 -1 -0.2" data-normal="0.00045857m -2.5997957m 5m">
+        <div class="annotationlong">Graphics Processing Unit</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-cooler" data-visibility-attribute="visible" data-position="-1 1.2 0.8" data-normal="0.00045857m -2.5997957m 5m">
+        <div class="altannotationlong">AIO Cooler sitting on the CPU</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-ram" data-visibility-attribute="visible" data-position="-0.2 1.2 -0.5" data-normal="0.00045857m -2.5997957m 5m">
+        <div class="annotation">RAM Sticks</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-psu" data-visibility-attribute="visible" data-position="-3.3 -2.4 1.5" data-normal="-0.00045857m -2.5997957m -5m">
+        <div class="annotation">Power Source Unit</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-ioports" data-visibility-attribute="visible" data-position="-3.2 2.1 -0.5" data-normal="-0.00045857m -2.5997957m -5m">
+        <div class="annotation">I/O Ports</div>
+      </button>
+
+      <button class="hotspot" slot="hotspot-backpanel" data-visibility-attribute="visible" data-position="0.3 1 -2" data-normal="-0.00045857m -2.5997957m -5m">
+        <div class="annotationlong">The PC Cases Back Panel</div>
+      </button>
+
+      </model-viewer>
+
+      <h1 class="z-2" style="font-family: poppins, medium, sans-serif; color: #303030; font-size: 7rem; position: absolute; top: 13rem; right: 15%; text-align: center;">PC Part<br>Builder</h1>
+      <div style="position: absolute; top: 30rem; right: 15%; height: 0.75rem; width: 25rem; background-color: #303030; border-radius: 1.5rem; z-index: 3;"></div>
+      <h3 style="font-family: poppins, medium, sans-serif; color: #303030; font-size: 2rem; position: absolute; top: 31.5rem; right: 17.5%; text-align: center; z-index: 3;">learning - ez mode</h3>
+      
+      <a href="#start1"><button class="btn" style="z-index: 1000000; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem; position: absolute; top: 35rem; right: 19%;" type="submit">Start</button></a>
+      <div class="z-1" style="position: absolute; top: 36.15rem; right: 17.5%; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+
+    </div>
+
+
+
+    <section style="display: flex; padding-bottom: 10rem;">
+
+      <div style="width: 60%; padding-top: 3rem;">
+        <h2 id="start1" style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;">Where to Start?</h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">
+          Have you ever wanted <strong>to build your very own gaming PC</strong> with the specs to wow your friends, to save money, or just to understand the machine you want play on and upgrade going forward? If so, <strong>your in the right place.</strong><br><br>
+          <strong>The most important things</strong> a newcomer PC builder can understand is:
+          their <strong>parts,</strong> the differences between them, pre-built PC's pro's and con's vs building PC's, and of course how it is you build a PC to begin with. 
+          Understanding your parts is a strong way to understand their performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to understand what it is exactly your <strong> building </strong>and what it will be good for,<br> <strong>this is where we step in.</strong><br><br>
+          Here at PC Part Builder, you can find <a href="#mb" style="color: #71DAFB;"><strong>all the information you need to learn about how PC's work</strong></a>, their <a href="motherboard.html" style="color: #DA3A57;"><strong>parts</strong></a> and what they do, best practices when sourcing and choosing parts, differences between parts, who makes parts and so much more, while keeping everything fun and simple. There's many reasons you may want to learn how to build a Gaming PC, and for that reason we also offer multiple differently orientated <a href="modernpc.html" style="color: #419D45;"><strong>guides</strong></a> to help users build the PC's for them.<br><br>
+          If your still not convinced with your own understanding and knowledge, we also showcase how <strong>building your own PC in many cases can be cheaper</strong> than ordering pre-built, saving money on labour costs- this also allows you to <strong>know exactly whats under the hood</strong> and be capable of fixing issues and error's in the future you otherwise would have needed a technician for! As well as this there are also short quizes at the end of parts pages to <strong>test your knowledge</strong> and see if your ready to go out and <strong>build your very own PC.</strong>
+          <br><br>
+          </p>
+      </div>
+
+      <div style="width: 40%;">
+        <div style="padding-bottom: 8rem;">
+          <model-viewer id="home2"
+        camera-orbit="135deg 55deg 20m"
+        loading="eager"
+        disable-zoom
+        alt="A Gaming PC 3D Model"
+        src="/models/FinalPcCase4.glb">
+          </model-viewer>
+      </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="parallax"></div>
+
+<div class="container">
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="Motherboard mATX" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/4cec4b403f5b41e89690c000553c43bb/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+      <div style="width: 60%; position: relative;">
+        <h2 id="mb" style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="motherboard.html">The MotherBoard</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">
+          Motherboards are circuit boards that distribute electricity and provide communication links to all components of your PC. They can vary in both colours and sizes. When building a PC, motherboards are the base of all your components- almost all components slot into the motherboard in one way or another (GPU, CPU, RAM, SSD, etc.) and the rest are plugged in using the relevant cables. Motherboards are held upright in the PC Case using struts, these struts are set into the inner back of the PC Case.
+          <br><br>
+          While motherboards are typically built with certain slots, sockets and functions as standard, some boards market themselves on built in RGB, extra slots for storage or extra PCLE-slots, or some have more updated designs such as DDR5 RAM compatability, etc.
+          <br><br>
+          Motherboards are one of the most crucial parts to a PC Build. Many parts revolve around the type of motherboard a user has- <strong>such as AMD and Intel CPU's only being...</strong>
+        </p>
+  <a  href="motherboard.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Graphics Processing Unit</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+            A GPU, meaning graphics processing unit, accelerates rendering images and videos on a device by design. Originally developed for rendering graphics in video games and computer-aided design (CAD) applications, GPUs have evolved to handle a wide range of parallel processing tasks.
+            <br><br>
+            GPUs excel at performing repetitive calculations simultaneously, making them well-suited for parallel operations.
+
+            A common GPU example is graphics rendering. <strong>GPUs are central to rendering high-quality images and videos.</strong> They manage shading, lighting, and texturing to create realistic visuals in video games, movies, and other visual content. Video games have become more computationally intensive, with hyperrealistic graphics and vast, complicated in-game worlds. With advanced display technologies, such as 4K screens and high refresh rates, along with the rise of virtual reality gaming, demands on graphics processing are growing fast. <strong>GPUs are capable of rendering graphics in both 2D and 3D. With better graphics performance, games can be played at higher resolution, at faster frame rates, or both...</strong>
+            <br><br>
+          
+          </p>
+  <a  href="gpu.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="RTX 4050" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/e8cf216b72f3495a9aa9c1740b138246/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="[CPU] Intel Core i7-9700K" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/ab07151166fe4b8ca32831e33e567dcb/embed?autospin=1&autostart=1&camera=0&dnt=1"> </iframe> </div>
+      </div>
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Central Processing Unit</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+          CPU is short for Central Processing Unit. It is also known as a processor or microporcessor.
+
+          It's one of the most important pieces of hardware in any digital computing system – if not the most important.<br><br>
+          
+          Inside a CPU there are thousands of microscopic transistors, which are tiny switches that control the flow of electricity through the integrated circuits.
+          
+          You'll find the CPU located on a computer's motherboard.
+          
+          A computer's motherboard is the main circuit board inside a computer. Its job is to connect all hardware components together.<br><br>
+          
+          Often referred to as the brain and heart of all digital systems, a CPU is responsible for doing all the work. It performs every single action a computer does and executes programs.
+        </p>
+  <a  href="cpu.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="parallax2"></div>
+
+<div class="container">
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">PC Cases</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; line-height: 2rem;">
+          You may feel there is nothing you cant gleam from the surface when looking at what a PC case is and what its all about, but never judge a book by its cover! While a PC case may be more straightforward than a central processing unit or a praphics processing unit <strong>there are still many smaller pieces to PC cases that can potetnially be overlooked,</strong> and we wouldnt want that now would we?
+          <br><br>
+          The computer case serves mainly as a way to physically mount and contain all the actual components inside a computer, like the motherboard, hard drive, optical drive, floppy disk drive, etc.
+          <br><br>
+          Some popular computer case manufacturers include CORSAIR, NZXT, Xoxide, and Antec. 
+          <br><br>
+          <strong>Motherboards, computer cases, and power supplies all come in different sizes called form factors. All three must be compatible to work properly together.</strong> Many computer cases, especially ones made of metal, contain very sharp edges. <strong>Be very careful when working with an open case to avoid serious cuts.</strong> 
+        </p>
+  <a  href="pccase.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="Fractal Define 7 XL Tempered Glass" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/7c89802dbaa0490587ff165aace4debe/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="G.Skill Trident Z5" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/138a902bd95b4aa08462182f51e0fe1a/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Random-Access Memory</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">If youve ever wanted to build your very own gaming PC with the specs to wow your friends or just to understand the machine you play on and upgrade it as you go, your in the right place. 
+          One of the most important things a newcomer PC Builder can understand is their parts, whether their building their PC or buying pre-built. Understanding your parts is a strong way to understand their
+        performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to launch into troubleshooting your machine in the future saving money on repair costs.
+      <br><br>
+    As well as this, building your own PC can also lead to saving money on labour costs usually found when purchasing pre-built PC's. Building a PC might sound daunting, but if you have a passion and
+  are willing to learn, it can become a very interesting hobby and net you the gaming PC of your dream!</p>
+  <a  href="ram.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Storage</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">If youve ever wanted to build your very own gaming PC with the specs to wow your friends or just to understand the machine you play on and upgrade it as you go, your in the right place. 
+          One of the most important things a newcomer PC Builder can understand is their parts, whether their building their PC or buying pre-built. Understanding your parts is a strong way to understand their
+        performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to launch into troubleshooting your machine in the future saving money on repair costs.
+      <br><br>
+    As well as this, building your own PC can also lead to saving money on labour costs usually found when purchasing pre-built PC's. Building a PC might sound daunting, but if you have a passion and
+  are willing to learn, it can become a very interesting hobby and net you the gaming PC of your dream!</p>
+  <a  href="storage.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="SSD_M2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/b9d5c181040a48b5af8aef09b6d91419/embed?autospin=1&autostart=1&camera=0&dnt=1"> </iframe> </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="parallax3"></div>
+
+<div class="container">
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="Blackout Coolers" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/c46ae1e934894241a9debf25966c78c9/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Cooling Systems</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">If youve ever wanted to build your very own gaming PC with the specs to wow your friends or just to understand the machine you play on and upgrade it as you go, your in the right place. 
+          One of the most important things a newcomer PC Builder can understand is their parts, whether their building their PC or buying pre-built. Understanding your parts is a strong way to understand their
+        performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to launch into troubleshooting your machine in the future saving money on repair costs.
+      <br><br>
+    As well as this, building your own PC can also lead to saving money on labour costs usually found when purchasing pre-built PC's. Building a PC might sound daunting, but if you have a passion and
+  are willing to learn, it can become a very interesting hobby and net you the gaming PC of your dream!</p>
+  <a  href="coolingsystems.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" href="motherboard.html" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">Power Source Units</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">If youve ever wanted to build your very own gaming PC with the specs to wow your friends or just to understand the machine you play on and upgrade it as you go, your in the right place. 
+          One of the most important things a newcomer PC Builder can understand is their parts, whether their building their PC or buying pre-built. Understanding your parts is a strong way to understand their
+        performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to launch into troubleshooting your machine in the future saving money on repair costs.
+      <br><br>
+    As well as this, building your own PC can also lead to saving money on labour costs usually found when purchasing pre-built PC's. Building a PC might sound daunting, but if you have a passion and
+  are willing to learn, it can become a very interesting hobby and net you the gaming PC of your dream!</p>
+  <a  href="psu.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="Asus ROG Thor" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/35d3efdffbce439d8ca1c72cbaa7d013/embed?autospin=1&autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+      </div>
+
+    </section>
+
+    <section style="display: flex; padding-bottom: 20rem;">
+
+      <div style="width: 40%;">
+        <div class="sketchfab-embed-wrapper"> <iframe title="FLEX PIXEL 120 RGB" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/417b9521d15a4f0a81fafca7d174655b/embed?autospin=1&autostart=1&camera=0&dnt=1"> </iframe> </div>
+      </div>
+
+      <div style="width: 60%; position: relative;">
+        <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="#">RGB Lights</a></h2>
+        <p style="font-family: poppins, medium, sans-serif; color: #303030; font-size: medium; padding: 0 3rem; line-height: 2rem;">If youve ever wanted to build your very own gaming PC with the specs to wow your friends or just to understand the machine you play on and upgrade it as you go, your in the right place. 
+          One of the most important things a newcomer PC Builder can understand is their parts, whether their building their PC or buying pre-built. Understanding your parts is a strong way to understand their
+        performance and their general value, allowing for you to make smart decisions when buying or upgrading, as well as allowing you to launch into troubleshooting your machine in the future saving money on repair costs.
+      <br><br>
+    As well as this, building your own PC can also lead to saving money on labour costs usually found when purchasing pre-built PC's. Building a PC might sound daunting, but if you have a passion and
+  are willing to learn, it can become a very interesting hobby and net you the gaming PC of your dream!</p>
+  <a  href="rgb.html"><button class="btn z-2" style="position: absolute; left: 30%; bottom: -5rem; background-color: #D9D9D9; border-radius: 3rem; width: 14rem; padding: 1rem 1rem; font-family: poppins, medium, sans-serif; color: #303030; font-weight: 600; font-size: 1.1rem;" roll="button">Learn More</button></a>
+  <div class="z-1" style="position: absolute; left: 36%; bottom: -6rem; border-radius: 8rem; width: 13rem; height: 3.5rem; background-color: #71DAFB; border-radius: 1.5rem;"></div>
+      </div>
+
+    </section>
+
+    <!--Testing with stuff here-->
+
+    <div style="background-image: linear-gradient(to top, rgba(115, 209, 249, 0.334), rgba(255,0,0,0)); height: 6rem; width: 200%; position: fixed; bottom: 0; left: -50%;"></div> 
+
+     <!-- <div style="background-image: linear-gradient(to top, rgba(115, 209, 249, 0.334), rgba(255,0,0,0)); height: 6rem; width: 200%; position: absolute; top: 63.5rem; left: -50%;"></div> -->
+
+     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+
+    </div>
+
+  </body>
+
+  <footer style="width: 100%; height: 18rem; background-color: #71dafb; position: absolute; left: 0;">
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 8rem; left: 5%;" href="contact.html">Contact Me</a>
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 4rem; left: 5%;" href="references.html">Link to my Bibliography of references, research and sources</a>
+
+  </footer>
+
+  <a href="#"><img src="/images/pngwing.com.png" style="width: auto; height: 8%; position: fixed; bottom: 4rem; right: 6.5%;"></a>
+
+  <!-- <a href="#"><img src="/images/pngwing.com.png" style="width: auto; height: 8%; position: absolute; top: 62rem; right: 6.5%;"></a> -->
+
+</html>

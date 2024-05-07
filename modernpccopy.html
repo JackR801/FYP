@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <script defer src="script.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="/src/styles.css">
+
+  <title>FYP</title>
+</head>
+
+  <body class="container">
+
+    <div class="spinner-wrapper">
+      <div class="spinner-border spinner3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <nav class="navbar w-100 z-3" style="background-color: white; padding-bottom: 8rem;">
+        <div class="container-fluid">
+          <div class="container">
+  
+          <a class="ms-auto navbar-brand" href="index.html">
+            <img src="/images/logo.png" alt="Logo" width="105" height="110" padding="0px">
+          </a>
+    
+          <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 25%; font-family: poppins, medium, sans-serif; color: #303030; z-index: 5;">
+          <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Parts</a>
+            <ul class="dropdown-menu z-3">
+              <li><a class="dropdown-item" href="motherboard.html">Motherboard</a></li>
+              <li><a class="dropdown-item" href="gpu.html">GPU</a></li>
+              <li><a class="dropdown-item" href="cpu.html">CPU</a></li>
+              <li><a class="dropdown-item" href="pccase.html">PC Cases</a></li>
+              <li><a class="dropdown-item" href="#">RAM</a></li>
+              <li><a class="dropdown-item" href="#">Storage</a></li>
+              <li><a class="dropdown-item" href="#">Cooling Systems</a></li>
+              <li><a class="dropdown-item" href="#">Power Source Unit</a></li>
+              <li><a class="dropdown-item" href="#">RGB Lights</a></li>
+            </ul>
+            </ul>
+          </div>
+  
+          <div class="d-inline-block dropdown" style="position: absolute; top: 3.2rem; right: 10%; font-family: poppins, medium, sans-serif; color: #303030;">
+          <ul class="me-auto mb-2 mb-lg-0 d-inline-flex">
+            <a class="navbarfont nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">How to Build</a>
+              <ul class="test dropdown-menu">
+                <li><a class="dropdown-item" href="#">Budget PC Guide</a></li>
+                <li><a class="dropdown-item" href="#" style="color: #419D45;">Modern PC Guide</a></li>
+                <li><a class="dropdown-item" href="#">Professional PC Guide</a></li>
+              </ul>
+            </ul>
+          </div>
+  
+        </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col-3 sticky-top" style="padding: 2rem 2rem 2rem 0; display: block;">
+            <div class="accordion bsb" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item bsb" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="bsb accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style="background-color: #F0F0F0; color: #303030;">
+                      Table of Contents
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                        <il><a class="sidebarlinksbsb" href="#mbone">Before you Start</a></il><br>
+                        <il><a class="sidebarlinksbsb" href="mb2">To Start</a></il><br>
+                        <il><a class="sidebarlinksbsb" href="mb3">Tools and Considerations</a></il><br>
+                        <il><a class="sidebarlinksbsb" href="mb6">The Other Bits</a></il><br>
+                        <il><a class="sidebarlinksbsb" href="mb7">The Build Guide</a></il>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bsb" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="accordion-button bsb collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style="background-color: #F0F0F0;">
+                      Parts
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                            <il class="sidebaritemsli"><a class="sidebarlinksbsb" href="#">Motherboard</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="gpu.html">Graphics Card</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="cpu.html">CPU</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="pccase.html">PC Cases</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="#">RAM</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="#">Storage</a></il>
+                            <il><a class="sidebarlinksbsb" href="#">Cooling Systems</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="#">Power Source Unit</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="#">RGB</a></il>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bsb" style="background-color: #F0F0F0;">
+                  <h2 class="accordion-header" style="background-color: #F0F0F0;">
+                    <button class="accordion-button bsb collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style="background-color: #F0F0F0;">
+                      How to Build Guides
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <ul style="line-height: 2rem; font-family: poppins, medium, sans-serif;" class="sidebaritems">
+                            <il class="sidebaritemsli"><a class="sidebarlinksbsb" href="#">Budget PC Guide</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="modernpc.html" style="color: #419D45;">Modern PC Guide</a></il><br>
+                            <il><a class="sidebarlinksbsb" href="#">Professional PC Guide</a></il><br>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="col-9" style="padding-top: 2rem; padding-bottom: 7rem;">
+            <section style="display: flex; padding-bottom: 2rem;">
+        
+              <div style="width: 70%; margin-right: 3rem; position: relative;">
+                <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a style="text-decoration: none; font-family: poppins, medium, sans-serif; color: #303030;" href="motherboard.html">Modern PC Guide</a></h2>
+                <p>
+                  In this guide, it is our goal to provide you with the context, information and instructions you need to select each component for your PC (along with your own research into parts) and use these parts to <strong>build your own mid-high range gaming PC.</strong> Specific parts used throughout this guide can be found <a href="#" style="color: #419D45;">here</a>, and we will be referencing them as we go but do not feel discouraged if your parts are different! Just double check with <a href="https://pcpartpicker.com/" style="color: #419D45;">PC Part Picker</a> to make sure your parts are all compatable first and then follow along.
+                  <br><br>
+                  As for the actual PC assembly, you can watch the video below or follow our step-by-step guide below as we build a modern mid to high end gaming PC.
+                  Feel free to follow along with the video found below as well!
+                </p>
+              </div>
+
+              <div style="width: 80%;">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Phanteks Eclipse G360A Water" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="600" src="https://sketchfab.com/models/21b7f7b2daef445f87b2463d2a7521f2/embed?autostart=1&camera=0&transparent=1&dnt=1"> </iframe> </div>
+              </div>
+            </section>
+            <section>
+
+              <h4 style="padding-bottom: 2rem;"><strong>Please read all material below before going forward with the purchase of PC parts and building a PC</strong></h4>
+
+              <div class="accordion bsb" id="accordionPanelsStayOpenExamplempc">
+                <div class="accordion-item bsb">
+                  <h2 class="accordion-header">
+                    <button class="bsb accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOnempc" aria-expanded="true" aria-controls="panelsStayOpen-collapseOnempc">
+                      <h4 id="content2">To Start</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOnempc" class="accordion-collapse collapse show">
+                    <div class="accordion-body .accordianitems"  style="overflow: auto; height: 40rem;">
+                      <p>
+                        There are some huge benefits that come with building your own PC. Firstly, you can tailor it to your exact needs whether those needs be gaming, video editing, or just simple office work. Building the exact machine you need can save you money, or give you a higher quality result in the end. You can also go wild with superficial stuff, like case design and RGB lighting if you're one of those folks that want their gaming rig to look like a carnival. You can fill it with the highest quality parts available, cut corners in certain areas, or save some serious cash by picking up a few second-hand parts. The point is, you'll know exactly what's going into your computer, and it will all be the exact parts you want.<br><br></p>
+
+                      </p><div style="float: left; padding-right: 1rem;"><div class="sketchfab-embed-wrapper"> <iframe title="Computer Parts ( Built PC )" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="340" height="280" src="https://sketchfab.com/models/bd6fb0ed93f3475b890a099fedecf351/embed?autospin=1&autostart=1&camera=0&dnt=1"> </iframe> </div></div>
+<p>
+You'll also have a unique experience when you perform a custom build. You will genuinely know your PC inside out and have a unique connection with the computer you put together. Building a rig will also give you a solid base to upgrade — if you put the thing together from scratch, putting in a new Solid State Drive (SSD), or switching out the Graphics Processing Unit (GPU) will seem like an easy task.<br><br>
+
+For a first-time builder, some parts of the process may be intimidating or confusing. So, to smooth the process we've compiled a list of things you should know before building a PC.<br><br>
+
+                        <h2>It's not as hard as it looks</h2><br>
+
+                        Building a computer is surprisingly easy. You'll only need a few tools, a good level of understanding of the parts, and the ability to follow some simple instructions. If you can build ready-to-assemble furniture, you'll be able to build your own PC!<br><br>
+
+                        <h2>The parts need to be compatable</h2><br>
+
+                        Computer parts have a large amount of cross-compatibility, but certain things won't work together. A motherboard will either be designed for AMD or Intel processors. Then there's a generational issue with parts like RAM — you're going to see DDR3, DDR4, or DDR5. Newer parts won't work on much older boards, and a certain GPU may require a certain generation of CPU or RAM. Then the PSU needs enough juice to power everything.<br><br>
+
+                        Incompatibility may also be subtle — everything may power on and "work" but the performance will be impacted. This could range from a PC that is majorly impacted to one that just isn't achieving the performance you would expect it to, but either way, you've wasted money. A good example of one part bottlenecking another is when you purchase a top-of-the-line GPU and offset it by massively cheapening out on the CPU. You won't get the most out of your very expensive graphics card in this sort of scenario, because the older, low-end, processor will hit its limit and hold everything back before the GPU is even stressed.<br><br>
+
+Then there are basic size issues. You'll struggle to fit a huge graphics card like an NVIDIA Titan in a mini PC build. It certainly won't be going in the PC's case. Luckily, you aren't on your own with any of this. Websites like <a href="https://pcpartpicker.com/" style="color: #419D45;">PC Part Picker</a> make the whole compatibility process simple. So plan any potential builds out on there before you start purchasing parts.<br><br>
+
+                        <h2>Static Electricity isn't your friend</h2><br>
+
+                        Although launching lightning from your fingertips is cool in a VR Star Wars game, it's not something you want to do while building the machine you intend to play said game on. Although the chances of frying a component with an accidental blast of static are slim, the risk is still there. Given the cost of computer parts, that's probably a risk you don't want to take.<br><br>
+                        
+                        Static electricity builds up on your body when you pick up too many free electrons from surfaces around you. When you have too many free electrons, they try to find somewhere else to go, which usually involves them jumping to another conductive object. This is the little static shock you sometimes encounter when you touch something made of metal. The risk is increased by things like carpeting, polyester clothing, and dry air.<br><br>
+
+                        Unfortunately, many computer parts are highly conductive as your PC is just one big complex electrical circuit. To make matters worse, an electrical current in the wrong place can severely damage or destroy a part. It isn't all bad news as the static buildup is quite easy to mitigate. The simplest way to negate the risk of frying a component with static involves the use of an anti-static wristband. These only cost a couple of euro and will take away the charge on your body by grounding you. Simply attach the band to your wrist or ankle and clip the other end to a grounded object (if your radiator has a green and yellow wire screwed into it, use that). An even easier, though slightly riskier, solution is to simply tap a bare metal part of a grounded object every few minutes to discharge any static buildup.<br><br>
+
+                        <h2>Operating Systems (OS)- what are they?</h2><br>
+
+                        Not a part, but certainly just as important as one- An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all of the other application programs in a computer. The application programs make use of the operating system by making requests for services through a defined application program interface (API). In addition, users can interact directly with the operating system through a user interface, such as a command-line interface (CLI) or a graphical UI (GUI).<br><br>
+
+                        What does this mean in english? WHen you boot up your home computer and see that all too familiar Windows OS, that's your operating system- computers don't come with them pre-installed!<br><br>
+
+                        If you've only ever bought pre-built PCs and laptops, you'd be forgiven for thinking operating systems were free. Not only does your HP, Lenovo, or Dell come with Windows already installed, but Microsoft will badger you into upgrading for free whenever their next version of Windows comes out.<br><br>
+
+                        However, if you're building a PC you will have to pay for the operating system — most of the time. A copy of Windows 10 will still set you back around €130 if you want to buy it directly from Microsoft. If it was an actual component and not software, this price would put it roughly on par with a decent one-terabyte solid-state drive, a motherboard, or 32GB of RAM. However, there are a few ways around paying a hefty fee for your operating system. One option is Linux, a free, open-source, OS that has been around for years. It may require a bit more technical know-how than Windows, but Linux compatibility has really improved in recent years.<br><br>
+
+                        If your heart is set on Windows, there is a legal grey area you can inhabit if you choose to. Various key reselling websites have legitimate Windows keys available for a few dollars. You can purchase a key and use it to activate a copy of Windows 10 or 11. This is all perfectly legal and in no way piracy. Microsoft doesn't really like the practice, though, and reserves the right to torpedo your OS if it determines the key was not purchased from what it considers to be an official source. Finally, you can just not activate your copy of Windows. Some features will be restricted, but the OS will still work.<br><br>
+
+                        <h2>There are some parts you shouldn't cheap out on</h2><br>
+
+                        Few people have unlimited funds, so it's likely most PCs are built with a budget in mind. Budgets mean compromise, and those compromises include either sourcing cheap used parts, or just buying a lower quality product. This is fine in a lot of cases. If you go for cheap RAM or a hard disk drive instead of a solid-state drive, you may notice a performance impact but it's nothing that can't be fixed with an upgrade once you have a bit more money.<br><br>
+
+                        But there are a couple of parts you should never skimp on. With one or two components, buying a quality part the first time around will make upgrading easier and could even prevent your entire desktop from being destroyed. The first part you shouldn't cheap out on is the motherboard. Motherboards are what hold the full rig together, so there's a chance a poor one could bottleneck the more expensive parts you bought with the money you saved. They also aren't expensive when compared to other parts. You can get a good, recent, motherboard for less than $200. Buying a more recent motherboard means you're probably going to be able to upgrade components like RAM and the CPU easily a few years down the line. If your motherboard is already a few years old when you first buy it, it may need upgrading too and at that point, you're basically building a new rig.<br><br>
+
+                        However, <strong>the one part you shouldn't cheap out on under any circumstances is the power supply unit.</strong> A cheap PSU will not only leave you without enough wattage for future upgrades — but it could also fry your more expensive components.<br><br>
+
+                        <h2>Slotting the CPU in is where the real difficulty is</h2><br>
+
+                        One part of PC building can still make you sweat even after you've got a few builds under your belt — fitting the processor. Most parts of a build simply click together or screw into the case, and the CPU isn't really that different. However, <strong>the consequences of messing up the CPU installation are far greater.</strong> The processor is one of the more expensive PC parts, and it contains a number of delicate pins on its underside. Dirt or thermal paste on these pins will at best leave you with an irritating cleaning job and at worst cause a short that could ruin the CPU entirely. Then there is the chance of bending the pins during the installation. Again, you may be able to carefully bend them back but you also may have broken your CPU.<br><br>
+
+                        Once your CPU is in place you have the additional steps of <strong>applying a thermal compound,</strong> which helps transfer heat between the CPU and heat sink and attaching the heat sink itself. Again, things can go wrong here. Forgetting the thermal paste could cause your processor to rapidly overheat and become damaged. Applying too much thermal paste could lead to a tedious cleaning job at best, and a short on the motherboard in a worst-case scenario. Then there's getting the best coverage from the paste, what should you use? A dot? A cross? Luckily, we have a section dedicated to thermal paste and patterns over on our <a href="cpu.html" style="color: #419D45;">central processing unit page</a> — so picking a pattern shouldn't be too hard.<br><br>
+
+                        <h2>It's never going to work straight away - don't panic!</h2><br>
+
+                        Seeing your PC come to life for the first time is a very rewarding feeling. The trouble is, it may not even start — and if it does there's a fair chance it won't boot. So have you messed up badly? Have your rookie mistakes ruined everything? Did you just turn hundreds, even thousands of dollars worth of computer parts into scrap? Probably not, the chances are you've overlooked something simple.<br><br>
+
+                        You have every chance of doing everything right on the first build, but if you didn't there's no need to panic. There are a bunch of tiny, easily fixable, things you may have forgotten that will stop your new PC from booting. It could be as simple as forgetting to actually turn the thing on — the majority of PSUs have an on/off switch on the back that has to be flipped before the PC starts working. If it still won't turn on, did you connect the front panel cables correctly?<br><br>
+
+                        If you're still having trouble, check the RAM is seated properly as this is a common issue when a PC fails to boot. Both of the retaining clips should audibly click when you firmly press the RAM into place. You should also check your motherboard's manual to ensure the RAM is in the correct channels. Then check all of your power cables are in place? Did you install all of the motherboard standoffs or is it touching the case and shorting out? Finally, did you install the CPU properly as most systems will instantly shut down if it begins to overheat (via PC Gamer). There are many simple reasons a PC could overheat, just consult Google before you start to panic.<br><br>
+
+                        <h2>You can always upgrade later</h2><br>
+
+                        When building a PC, you'll have a budget in mind and may have to compromise to stay under that budget. However, that is easier said than done. Companies usually release a range of products, and temptation can kick in when you see what you could get for a few dollars more. That all adds up, and soon the price of your sub $1,000 build could have doubled. There is a way around this if you just stay grounded and design your rig for upgradability. Future-proof parts like the motherboard and PSU, while compromising on others.<br><br>
+
+                        Some parts are easily upgradable. If you go with a 500 GB SSD to save a few dollars you can be safe in the knowledge adding to that storage later is neither expensive nor difficult. The same applies to RAM, though you should use the same RAM if at all possible, putting 16GB in then snapping an extra 16GB in when you have more money is probably the simplest upgrade you can do. Swapping out a GPU might be more expensive, but even that isn't too difficult.<br><br>
+
+                        The point is, a build doesn't have to be a one-off. It can be an ongoing project that gets better as time goes on. Feel free to go fairly basic with your first build, you can always build the rig of your dreams one piece at a time.<br><br>
+
+                        </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bsb">
+                  <h2 class="accordion-header">
+                    <button class="bsb accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwompc" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwompc">
+                      <h4 id="content3">Tools and Considerations</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwompc" class="accordion-collapse collapse">
+                    <div class="accordion-body"  style="overflow: auto; height: 40rem;">
+                      Here we wanted to provide a go-to checklist for exactly what’s needed to help ease the tedium of PC building. The build process goes much smoother when you have all the right tools at your fingertips.<br><br>
+
+                      <h2>Organised Workspace</h2><br>
+
+                      The title may be intangible but what’s needed to get this done is quite the opposite. You need a clean dust-free workspace. Think “workbench” or at least a table that is at a minimum of 5ft in length and 3ft feet deep (width). It’s also great to have a tray or long receptacle to better keep track of screws, standoffs, and other small mounting and assembly hardware.<br><br>
+
+                      <h2>A #2 Philips Head Screwdriver</h2><br>
+
+                      This screwdriver uses a #2 Phillips head. This will be your primary tool to service most of your system assembly. These are affordable and super easy to find. A torque or ratchet screwdriver with interchangeable heads is a good investment for this. Lastly, <strong>it helps if it’s magnetic</strong> to keep a grip on those tiny screws. <br><br>
+
+                      <h2>A #1 Philips Head Screwdriver</h2><br>
+
+                      Alternatively, this screwdriver features a much smaller #1 head and is excellent for screws used to install small gum stick style M.2 drives in SSD and NVMe flavors.<br><br>
+
+                      <h2>Wedges and Prying tools</h2><br>
+
+                      You often find many of these tools in phone and laptop repair kits like an iFixit kit. These are great for prying open/off front panels of PC cases when installing radiators for liquid cooling and/or removing and installing case fans. You can often use these tools to straighten any bent radiator fins on your Asetek-powered AIO liquid cooler.<br><br>
+
+                      <h2>Isopropyl Alcohol</h2><br>
+
+                      All Asetek-powered liquid coolers ship with pre-applied TIM. So no thermal paste is needed. However, if you prefer to use your own or you’re planning to remount that same liquid cooler, you will need to clean the previous thermal compound as best you can. Isopropyl alcohol is clutch for this. <strong>You cannot use water or other liquids to clean your thermal paste or otherwise off, or on any other parts.</strong><br><br>
+
+                      <h2>Thermal Paste</h2><br>
+
+                      This is a heat-conductive material substance that improves contact between the heatsink of the CPU AIO cooler and helps it dissipate heat. There are a wide variety of thermal compounds to choose from; some better than others. However, <strong>we can recommend Noctua’s NT-H2 thermal compound.</strong><br><br>
+
+                      <h2>Compressed Air</h2><br>
+
+                      High-pressure air does wonders for managing dust and debris. There is often debris from retail boxes and dust on your precious PC components. A few short blasts of compressed air will both help keep a spartan-looking PC rig and help improve component longevity.<br><br>
+
+                      <h2>Zip Ties</h2><br>
+
+                      These are a godsend for keeping your build nice and tidy. A few choice zip ties in the right place can convert a veritable rat’s nest of scattered cables into a clean and pristine pro-style battle station.<br><br>
+
+                      <h2>Tweezers or Needle-Nose Pliers</h2><br>
+
+                      I still drop screws! It’s inevitable. Just embrace it and be ready with a set of tweezers to retrieve the elusive little buggers when they roll under the motherboard or any other hard-to-reach area inside your PC. <br><br>
+
+                      <h2>Headlamp</h2><br>
+
+                      Illuminated tools are helpful but don’t get the job done like a bright and comfortable headlamp. Light up the dark areas with a steady beam of illumination keeping your hands free so you can work more efficiently. <br><br><br>
+
+                      <h2>Ways to Ground Yourself</h2><br>
+
+                      
+                      1. Wearing rubber-soled shoes to block my connection to the ground<br>
+                      2. Using anti-static bags whenever possible<br>
+                      3. Touching exposed metal portions of my PC case when building, and…<br>
+                      4. It helps if that “organized workspace” mentioned above, is a hard dense surface to minimize the build-up of static.<br><br>
+
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item bsb">
+                  <h2 class="accordion-header">
+                    <button class="bsb accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFivempc" aria-expanded="false" aria-controls="panelsStayOpen-collapseFivempc">
+                      <h4 id="content6">The Other Bits</h4>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFivempc" class="accordion-collapse collapse">
+                    <div class="accordion-body"  style="overflow: auto; height: 40rem;">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr style="margin: 5rem 0 3rem 0; color: #419D45; background-color: #109f17; height: 0.5rem; width: 100%;">
+
+            </section>
+
+
+
+            <section>
+
+              <h2 style="font-family: poppins, medium, sans-serif; color: #303030; text-align: center; font-size: 2.5rem; padding-bottom: 1rem;"><a id="content7">The Build</a></h2>
+
+              <nav class="sticky-top" aria-label="guide-navigation" style="padding-top: 1rem; margin: 0 auto;">
+                <ul class="pagination pagination-lg">
+                  <li class="page-item">
+                    <a class="page-link" href="#b1" style="color: #419D45;">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#b2" style="color: #419D45;">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#b3" style="color: #419D45;">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#b4" style="color: #419D45;">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#b5" style="color: #419D45;">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#b6" style="color: #419D45;">6</a>
+                  </li>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#b7" style="color: #419D45;">7</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#b8" style="color: #419D45;">8</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#b9" style="color: #419D45;">9</a>
+                </li>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#b10" style="color: #419D45;">10</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#b11" style="color: #419D45;">11</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#b12" style="color: #419D45;">12</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#b13" style="color: #419D45;">13</a>
+              </li>
+                </ul>
+              </nav>
+
+              <div class="xscroll" style="position: relative;">
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 0; top: 0;" id="b1">
+                  <h2 class="guideheader">Step 1 - Picking Parts</h2>
+                  <section>
+                    <div style="float: right;"><img src="/images/b1.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div>
+                    <p><strong>Have a well lit, clear desk or table.</strong> It is suggested to grab a workstation where you will have enough space to be able to spin your case around to work on all sides. If you do not have a large workstation, you can opt for placing a blanket on the floor to spin your case around- this is also acceptable but make sure your floor is clean and free of dust. It is also suggested to be in a well ventilated room, and not in direct sunlight.<br><br>
+
+                    </p><div style="float: left;"><img src="/images/b2.jpg" style="width: 25rem; height: auto; padding-right: 1rem;"></div><p>
+
+                      This means no cables or clutter on or under your desk or workstation. It's a good idea to use cups or containers to hold screws that will come from parts, as wella container or box to hold your tools. Isopropyl Alchohol can be used to clean surfaces without leaving behind lint. Kitchen roll will also work in a pinch, but take caution to no tleave behind any clumps or pieces that might fall off.<br><br>
+
+                      On top of this a Microfibre Cloth can be used to clean any fingerprints left behind as well as a torch or headtorch to help you see everything you need to.<br><br>
+                        
+                      <strong>There should be absolutely 0 drink or food present in the room where you build your PC,</strong> no one entering should bring any with them and clothes with loose materiels, crumbs or lint should not be worn, it is also suggested to tie hair up and remove loose jewellery.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/b3.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Take care of your parts and assure there is no way for them to bumped off a high ledge or otherwise ran into, and also on the more optional side you can order yourself an anti-static mat for your desk to move your case easily. As well as this, if your workspace is dry, you can order an anti-static wristband to negate any potential static electricity damage you can leave on your parts as you build.<br>
+
+                    </p>                    
+                  </section>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 100%; top: 0;" id="b2">
+                  <h2 class="guideheader">Step 2 - Setting Up Work Area</h2>
+                  <div style="float: left;"><img src="/images/a1.jpg" style="width: 25rem; height: auto; padding-right: 1rem;"></div>
+                    <p><strong>Have a well lit, clear desk or table.</strong> It is suggested to grab a workstation where you will have enough space to be able to spin your case around to work on all sides. If you do not have a large workstation, you can opt for placing a blanket on the floor to spin your case around- this is also acceptable but make sure your floor is clean and free of dust. It is also suggested to be in a well ventilated room, and not in direct sunlight.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/all-parts.webp" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      This means no cables or clutter on or under your desk or workstation. It's a good idea to use cups or containers to hold screws that will come from parts, as wella container or box to hold your tools. Isopropyl Alchohol can be used to clean surfaces without leaving behind lint. Kitchen roll will also work in a pinch, but take caution to no tleave behind any clumps or pieces that might fall off.<br><br>
+
+                      On top of this a Microfibre Cloth can be used to clean any fingerprints left behind as well as a torch or headtorch to help you see everything you need to.<br><br>
+                        
+                      <strong>There should be absolutely 0 drink or food present in the room where you build your PC,</strong> no one entering should bring any with them and clothes with loose materiels, crumbs or lint should not be worn, it is also suggested to tie hair up and remove loose jewellery.<br><br>
+
+                    </p><div style="float: left;"><img src="/images/a2.jpeg" style="width: 25rem; height: auto; padding-right: 1rem;"></div><p>
+
+                      Take care of your parts and assure there is no way for them to bumped off a high ledge or otherwise ran into, and also on the more optional side you can order yourself an anti-static mat for your desk to move your case easily. As well as this, if your workspace is dry, you can order an anti-static wristband to negate any potential static electricity damage you can leave on your parts as you build.<br>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 200%; top: 0;" id="b3">
+                  <h2 class="guideheader">Step 3 - Motherboard and CPU install</h2>
+                  
+                    <h3>The Hard Part First</h3><br><br>
+                    <div style="float: right;"><img src="/images/a3.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div>
+                    <p>
+                      Your system's CPU or processor may be powerful enough to keep your games running smoothly and chew through productivity tasks with ease, but it (and the CPU socket that it drops into on the motherboard) are surprisingly easy to damage if you aren't careful and don't know what you're doing. <br><br>
+
+                      It's essential that you handle your processor with care and install your CPU correctly in the motherboard socket. If it's clamped into the socket wrong, you can damage the CPU, your motherboard, and even other components if you power the system up with the CPU installed incorrectly.<br><br>
+
+                      <h3>Be Careful with the Pins!</h3><br><br>
+
+                    </p><div style="float: left;"><img src="/images/a4.jpg" style="width: 25rem; height: auto; padding-right: 1rem;"></div><p>
+
+                      Older AMD AM4 processors use a Pin Grid Array (PGA) with hundreds of tiny pins on the bottom of the chip. Newer AM5 CPUs and all of Intel's consumer CPUs are the Land Grid Array (LGA) type, with pads on the bottom of the CPU and the pins in the socket. Whichever you're using, you need to take care not to bend the pins by dropping or banging the CPU or socket.<br><br>
+
+                      Bent pins can be extremely difficult to recover from – especially if it's more than just one or two near the edge. These pins and pads are where the CPU and motherboard meet to exchange data and power, so even one broken or bent pin can keep your system from booting or disable some important feature like USB. Keep your CPU in its plastic or cardboard tray until the minute you're ready to install your CPU. And don't drop it!<br><br>
+
+                      <h3>Prep your Motherboard</h3><br><br>
+
+                    </p><div style="float: right;"><img src="/images/a5.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                        
+                      You can wait until your motherboard is screwed into your case to install your CPU, but it's generally easier and safer to do so with the motherboard still outside your case. This isn't the easiest option, though, if you're upgrading a CPU in an existing desktop.<br><br>
+
+                      If you're building a new PC, first place the board on top of the anti-static bag that it came in and/or on top of the motherboard box to give the bottom of the board and your table or desk some protection from each other.<br><br>
+
+                      <h3>Open the Sockets</h3><br><br>
+
+                      Next, you'll need to open the socket. For the most recent Intel and AMD platforms, that's done by pushing down on the metal lever on the right side and moving it slightly away from the socket. You'll need to move the lever out from under the piece of metal holding it down, and slowly lift the bar all the way up and away from the socket. On older AMD AM4 motherboards, the bar is smaller, held down by a plastic clip, and has less resistance. But the bar-lifting process is similar.<br><br>
+
+                      On Intel and current AMD boards, you'll then need to lift the silver metal CPU retention plate up and away from the socket, the same way you lifted the metal bar but on the opposite end of the socket. Note that, if your motherboard is brand-new, there should be a plastic piece in the center of the retention plate, designed to protect the socket. You can pop this out now or leave it in until you actually install the CPU, when it will be forced out by the CPU. Hang onto this protective cover if you think there's a chance you might want to store, sell, or give away the motherboard at some later date because it's important to protect those socket pins.<br><br>
+
+                      The retention plate and the bar should now be past vertical, allowing the socket to remain open for the next step of placing the CPU in its new home.<br><br>
+
+                      <h3>Line Up Triangle Arrows</h3><br><br>
+
+                      Don't mess this bit up unless you want to destroy your components! Before grabbing your CPU, look on the socket or the retention plate for a small triangle / arrow in one of the corners. Usually, it's in the upper left (image below, AMD) or lower left (Intel). Once you've located the arrow indicator for the socket, check your CPU for a matching arrow in one of its corners. <br><br>
+
+                      You need to make sure the triangular arrow on your CPU (see image of the AMD CPU, above) lines up in the same corner as the same arrow on your CPU socket or retention plate. If you clamp your CPU down with these arrows misaligned, you will damage your motherboard, likely your CPU, and possibly other components if you power the system up with the CPU installed this way.<br><br>
+
+                      <h3>Gently Place your CPU</h3><br><br>
+
+                      Now that you know where your arrows are, it's time to put the CPU in the socket. Gently place the chip in the center of the socket, lining up the bottom edge of the CPU with the bottom edge of the socket. Check one last time that, like in the image above, the arrow on your CPU aligns with the arrow on your socket or retention bracket. Then, gently lower the top edge of the CPU into the socket.<br><br>
+
+                      With modern CPUs, the chip doesn't click or snap into place. You just need to look and make sure that it's properly seated, fully sitting inside the plastic frame that runs around the edge of the socket itself. If anything looks crooked or one edge or corner sticks out in a way that the others don't, then the CPU isn't seated properly. If that's the case, gently lift up the CPU and re-seat it in the socket until everything looks straight and the CPU is perfectly centered in the middle of the socket.<br><br>
+
+                      <h3>Lock the Sockets</h3><br><br>
+
+                      With your chip in its proper place, it's time to reverse a couple of the previous steps above. But first, check one last time that your CPU and socket arrows are aligned. Because if they aren't, you're about to destroy some expensive hardware.<br><br>
+
+                      With that last check done, now lower the metal retention bracket back down, on top of the CPU.<br><br>
+
+                      Next, it's time to lower the metal lever / retention bar again. Do this slowly, making sure that the metal lip sticking out of the retention bracket is under the raised section at the beginning of the bar, at the bottom or top of the socket (depending on if it's an Intel or AMD board).<br><br>
+
+                      You'll have to press firmly to get the bar back under the metal clip that holds it in place. As you slowly press the bar back down, you'll notice increasing resistance, especially with an Intel motherboard / CPU. This is normal, as pressure is needed to press and hold all those pads against all those pins. So long as you followed the above steps closely, aligning the arrows and making sure the CPU was seated in the center of the socket, there's nothing to worry about.<br><br>
+
+                      Press the retention lever/bar down firmly until it's parallel to the motherboard, and slip it under the metal piece on the socket that holds it down. With the arrows aligned, the CPU in its socket and the retention plage and bar back in place holding things in place, the processor install process is complete.<br><br>
+
+                      Congratulations! Your CPU is now installed in its socket and it's time to add thermal paste and your cooler of choice, both of which we'll cover in<br><br>
+
+                      <br>
+
+                    </p>    
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 300%; top: 0;" id="b4">
+                  <h2 class="guideheader">Step 4 - Memory Install and Arrangements</h2>
+                  <h4>RAM is pretty straightforward</h4><p>
+
+                      Most modern motherboards support dual channel RAM configurations, which means that there are two 64-bit lanes from the memory to the CPU as opposed to just a single one, a huge speed advantage. To take advantage of dual channel speeds, you need to have two or four sticks of RAM and place them into the correct DIMM slots so that half of the memory is on one channel and the other half is on the other. <br><br>
+
+                    </p><div style="float: right;"><img src="/images/a5.png" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      If you’re installing two DIMMs into a board with four empty slots, you need to make sure that you check your motherboard manual to see which slots represent channel A and B. Usually this means putting the RAM in other slot, but check the instructions and look for a diagram like this one.<br><br><br>
+
+                      1. Unlock the latches on the RAM slot. Some boards have them on both sides of the slot, while many now just have one. Push down on the latches to ensure they're in the open position.<br><br>
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/a6.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      2. Line up the first stick. You'll see that the motherboard has a notch and the RAM has a divot. These have to line up. If they don't, the RAM won't fit. Make sure you have the RAM facing the right way. If you don't, turn it around.<br><br>
+                        
+                      3. Place the RAM in the slot. Make sure it's aligned between the latch guides.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/a7.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p></p>
+                      
+                      4. Press down on the RAM until it makes a clicking sound. You may need two hands. If it's your first time building, don't be alarmed that it takes more pressure than you expected; the process requires a bit of force. You shouldn't be able to see any of the gold contacts. The latches on the sides of the RAM slot should have popped up to lock the memory in place.<br><br>
+
+                      5. Repeat the process with each stick of RAM until you're done. If your RAM isn't fitting in, make sure you're pressing down with some force. Also be doubly sure that the RAM is facing the right way, and that the notch and divot are aligned.<br><br>
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/a8.jpg" style="width: 100%; height: auto; padding-left: 1rem;"></div><p>
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 400%; top: 0;" id="b5">
+                  <h2 class="guideheader">Step 5 - M.2 SSD Install and considerations</h2>
+                    <p>If you’re using an M.2 SSD, now is as good a time as any to install it, because later on other parts may get in the way. You could also do this step earlier in the process, as an M.2 drive is small and lives flat against the board, so it won't get in the way of anything else.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/a9.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      If your board has more than one M.2 slot, as most do these days, you'll first want to figure out which slot to install it in. Depending on the type of drive (SATA or PCIe / NVME) and the compatibility of the slots, some M.2 drives won't work or won't fit in some M.2 slots. You'll also want to make sure if you have a fast PCIe 4.0 or 5.0 SSD, that it goes into the fastest slot on your board. Consult your manual, which will tell you what types of drives your board's M.2 slots support. But as a general rule, if your boot drive is PCIe, you should install it in the M.2 slot closest to the CPU.<br><br>
+
+                      Once you've located the slot you want to use, you may also have to remove a heatsink / cover to actually get to the M.2 slot and install your drive. This usually involves removing one or two small screws, taking the heatsink off, and then your M.2 slot will be ready to receive your SSD.<br><br>
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/a10.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      If it’s already installed, remove the screw located across from the M.2 slot and slide the SSD into the M.2 slot at an angle. Make sure the notch lines up with the slot, similar to RAM installation. If the notch doesn’t line up, your drive may not be compatible with that slot (again, check your manual for details).<br><br><br>
+
+                      Slowly lay the SSD flat and secure the mounting screw. This tiny screw is easy to drop, which is another reason to install M.2 drives before putting your motherboard into the case. Some high-end boards will have a small plastic tab you can just push to the side when installing a drive, and then slide back to hold the drive down.<br><br>
+                    </p><div style="float: right; padding-left: 1rem;"><img src="/images/a12.jpg" style="width: 25rem; height: auto; padding-right: 1rem;"></div><p>
+                      Once your drive is installed and secured by a screw or tab, put the heatsink back where it was on top of your drive, unless your drive has a heatsink of its own. Just be sure if you're putting the motherboard heatsink back above your drive, to remove the protective plastic sheet over the thermal pad (just like on the CPU cooler), which should be on the inside surface of the heatsink.<br><br>
+                      
+                    <br>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 500%; top: 0;" id="b6">
+                  <h2 class="guideheader">Step 6 - Pre-Build Test</h2>
+                  <h4>Where Everything Going Wrong is a Good Thing</h4><p>
+
+                    Because finding out now is a lot better then finding out later. This test is optional but <strong>strongly recommended</strong>, and what you'll need to test is your power supply and it's acessories and a GPU if applicable. <br><br>
+
+                  </p><div style="float: right;"><img src="/images/Screenshot 2024-05-04 215401.png" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                    Connect the GPU into the PCIe X16 slot on the motherboard (it’s the long one, and you’ll want to use the topmost one if there’s more than one on your motherboard). If necessary, plug the PCIe power connectors from the power supply into the card. (You may not need to do this on lower-end cards). One trick to try and keep your graphics card in place is to use your motherboard boxes flap or other to keep the gpu in place.<br><br>
+
+                    Next grab your power supply- If you're using a modular power supply, you may want to plug all the cables you'll need into the back of the front of the power supply and then route the 24-pin power connector and supplemental/CPU power connector into the motherboard. The 24-pin connector is usually somewhere near the center-right of the motherboard, while the PSU power connector plugs in at the top left corner.<br><br>
+                  </p><div style="float: left; padding-right: 1rem;"><img src="/images/a6.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                    <strong>Do Not Force Anything</strong><br><br>
+                      
+                    With that all done now you can connect up your keyboard and display, making sure to plug your HDMI or Displayport into your GPU and not you rmotherboard- the reason for this is video is output from your GPU, plugging into your motherboard only makes use of any onboard intergrated graphics found on your CPU which is to say, not nearly as strong as your GPU. Then dont forget to flip on the power switch on your PSU and now it's time to power on your PC, except one problem- there's no power button yet!<br><br>
+
+                  </p><div style="float: right;"><img src="/images/a7.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p></p>
+                    
+                    Take your philips screwdriver and find the front panel header on your motherboard (often bottom right) and then locate the pins labeled for power switch (pwr_sw), this can come from information from you rmanuel or just printed labels on the board. Next, place your screwdriver on the negative and positive pins for the power switch and all going well, this will power on your PC for the first time, mash the setup key which is usually delete on your keyboard until you are greeted with the BIOS screen.<br><br>
+                    <h4>What is the Bios?</h4><br>
+                    BIOS comes included with computers, as firmware on a chip on the motherboard. In contrast, an OS like Windows or iOS can either be pre-installed by the manufacturer or vendor or installed by the user. BIOS is a program that is made accessible to the microprocessor on an erasable programmable read-only memory (EPROM) chip. When users turn on their computer, the microprocessor passes control to the BIOS program, which is always located at the same place on EPROM.<br><br>
+
+                    When BIOS boots up a computer, it first determines whether all of the necessary attachments are in place and operational. Any piece of hardware containing files the computer needs to start is called a boot device. After testing and ensuring boot devices are functioning, BIOS loads the OS -- or key parts of it -- into the computer's random access memory (RAM) from a hard disk or diskette drive (the boot device).<br><br>
+
+                    Now you can check to see all your parts are detected, you should find your SSD, your memory, your fans and your CPU.
+                  </p><div style="float: left; padding-right: 1rem;"><img src="/images/a8.jpg" style="width: 100%; height: auto; padding-left: 1rem;"></div>
+
+                  We do this to POST (Power On Self Test) the computer which tests the hardware of the computer before loading the OS to make sure everything is working.<br><br>
+                  
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 600%; top: 0;" id="b7">
+                  <h2 class="guideheader">Step 7 - Case Preparation</h2>
+                    <p>Flollowing on from our setting up of the work area step, have a well lit, clear desk or table. It is suggested to grab a workstation where you will have enough space to be able to spin your case around to work on all sides. If you do not have a large workstation, you can opt for placing a blanket on the floor to spin your case around- this is also acceptable but make sure your floor is clean and free of dust. It is also suggested to be in a well ventilated room, and not in direct sunlight.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      This means no cables or clutter on or under your desk or workstation. Now that we’ve built the core platform (minus the graphics card, which we’ll do later), we’re going to install the CPU, RAM and SSD-equipped motherboard into the case. If you haven’t yet, remove the side panels on your chassis. Most cases have thumb screws holding their panels in place, which makes it easy to remove them.<br><br>
+
+                      Remember you can use a blanket or a towel on the ground or your desk to lessen friction and protect your case. The box your case came in is useful as a place to store the front and side panels of your case while you work, that is after taking them off. This should be relatively simple with some thumb screws.<br><br><br>
+                        
+                      Every case is different but the common denominators of a case are the front panel glass, the back panel which comes off for cable management, the side panels and the PSU storage area either on top of bottom side of your case.<br><br>
+
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      
+                      Depending on your motherboard, you may have an I/O shield for your case to install now before your components enter, the flat side will always face the motherboard. Put pressure on one corner of the shield during installation into the slot at the back of the PC case to make it an anchor, then force the rest into place. This shield acts simply as a topper to the motherboard to make it flush with the case, but this can sometimes come built-in.<br>
+
+                      </p><h4>Standoffs</h4><br><p>
+
+                      Standoffs are the pieces of the motherboard that actively hold the board in place inside the case, you may find some pre-installed or you may find some in a small bag that came with your case. Many motherboards of different sizes can require different standoffs so it is best to check the manual to find out where you need to place yours. <strong>Use extreme caution while installing these standoff's as standoff's in the wrong area's can cause a board to degrade, burn out or bend which can cause extreme damage.</strong>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 700%; top: 0;" id="b8">
+                  <h2 class="guideheader">Step 8 - Motherboard Installation</h2>
+                    <p>Now it’s finally time to put the motherboard in your case. Make sure the holes on the motherboard line up with the standoffs you installed and that the ports line up with the cutouts on the IO shield. <br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Once the board is in, put the screws through the holes on the motherboard and into standoffs, then screw them down to anchor the motherboard in place.<br><br>
+
+                      Once this is done, it's a good time to stand the case up, as much of the rest of the build process is easier in this orientation.<br><br><br>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 800%; top: 0;" id="b9">
+                  <h2 class="guideheader">Step 9 - Fans and Cooling</h2>
+                    <p>The majority of cases and PCs sold today will have unused fan locations available. Even if all your fans are working, there’s a good chance you’ll have room for at least one more. Cooling fans are available in a wide range of sizes and shapes (and colors), from tiny barrel-type fans sometimes used to cool chips, to large axial fans used in most power supplies. The most common fan sizes fall in the 70mm to 140mm range, but fans as large as 230mm are becoming more popular. Fans with a diameter of 120mm are typical in newer cases.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Look for one with a high air flow (measured in cubic feet per minute, or CFM) and low noise level (measured in decibels, or dBA). This information will be on the package or on the product’s information page. Larger fans can usually spin at lower speeds and still move plenty of air without making much noise. Some manufacturers incorporate LED lighting into their fans as well.<br><br></p>
+
+                      <h4>Installation</h4><br><p>
+
+                      To mount a fan, hold it up to the mounting position so that the holes for screws line up with the holes in the case. While holding the fan in place with one hand, use four screws to secure it in place with the other hand. If you just have plastic friction clips holding a fan in place, simply un-snap the clips, remove the fan, and pop the new one in its place. Next, attach the fan to an unused fan header. The headers are keyed to ensure a proper connection. Four-pin headers will work with 3-pin fans, but you won’t have control over fan speeds.<br><br>
+
+                      On top of this a Microfibre Cloth can be used to clean any fingerprints left behind as well as a torch or headtorch to help you see everything you need to.<br><br><br>
+                        
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 900%; top: 0;" id="b10">
+                  <h2 class="guideheader">Step 10 - Power Supply</h2>
+                    <p>The power supply, or PSU, is usually mounted to the back of the case. Sometimes you’ll find it at the top, but it’s usually mounted at the bottom, where it can pull in cool air from under the chassis. If you're using a modular power supply, you may want to plug all the cables you'll need into the back of the front of the power supply before inserting and installing it. Otherwise, you'll have to plug them in later from inside the case where it's hard to see the cable labels on the PSU. If your power supply doesn't have removable cables, this obviously isn't an issue. <br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Once you put the power supply in the case, it’s generally as simple as screwing it into place with four screws at the back of the case. Or with some cases, you'll need to re-install a bracket (see above, right) that you'll first need to remove in order to slide the power supply in, then screw the four mounting screws into that. Once the PSU is installed, route the 24-pin power connector and supplemental/CPU power connector through your case and plug them into the motherboard. The 24-pin connector is usually somewhere near the center-right of the motherboard, while the PSU power connector plugs in at the top left corner. <br><br>
+
+                      Don't forget this last step, because the supplemental CPU power connector is one of the harder cables to install, jammed as it is near the top of the case. And it only gets harder to plug in once you start adding other cables and components, making it progressively difficult to do later on. And if you forget to plug it in altogether, your system won't boot.<br><br>
+                    
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 1000%; top: 0;" id="b11">
+                  <h2 class="guideheader">Step 11 - Graphics Card</h2>
+                    <p>First off, if you're going to be installing a very large card, like an RTX 4090 / 4080 or an RX 7900 (or a somewhat smaller card that you're installing in a more cramped case), you'll want to do this a bit later, after you've plugged in all the rest of your cables and done whatever cable routing / cleanup you plan on doing;  a bulky card will block easy access to headers and connectors on the motherboard.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Installing a graphics card is also an optional step. If you’re using an Intel or AMD CPU with integrated graphics and don’t plan on doing serious gaming, you may not need or want a discrete graphics card. But many AMD CPUs, as well as high-end Intel models, don’t have onboard graphics and will require a graphics card in order to connect and output to your monitor. <br><br>
+
+                      Connect the GPU into the PCIe X16 slot on the motherboard (it’s the long one, and you’ll want to use the topmost one if there’s more than one on your motherboard). If necessary, plug the PCIe power connectors from the power supply into the card. (You may not need to do this on lower-end cards).<br><br>
+                        
+                      To install the GPU, you'll likely have to remove some slot covers on the back of the case so that the DisplayPort, HDMI and any other graphics card ports show through, letting you connect your monitor(s) later. It's a good idea to first try lining up your card in the case alongside its slot before installing it, if you want to save yourself the hassle of removing the wrong brackets and having to re-install them later. Usually, the top expansion bracket will not have to be removed. That slot is a holdover from days when a PCIe x1 slot lived atop the first graphics card slot. But these days that area is now occupied by the primary M.2 connector (often hidden behind a heat spreader).<br><br>
+
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      
+                      Push your graphics card into the PCIe X16 slot on the motherboard (it’s the long one closest to the center / top of the board). If your graphics card has PCIe power connectors on its front edge, you'll also need to connect those from the power supply to the card. (You may not need to do this on low-end cards, because the PCIe slot can deliver 75 watts on its own).<br><br>
+
+                      Note that for high-end cards, you'll need to connect two or even three PCIe power connectors, sometimes with an adapter that comes with your card. If you are installing an extremely high-end card like an RTX 4090, you may also want to invest in an ATX 3.0 power supply, which will have a 12VHPWR connector for your GPU, so you only have to plug in a single cable.<br>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 1200%; top: 0;" id="b12">
+                  <h2 class="guideheader">Step 12 - Cable Management</h2>
+                    <p>OK, just a few more cables to go until we try turning the PC on. Make sure the connectors for any fans are plugged into the motherboard fan headers. Then, attach the front-panel audio cable, USB 2.0, USB 3.0 and 3.1/3.2 case connectors to those headers.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      You’ll want to consult your motherboard manual for this, because their location and number varies by motherboard model. Lastly, there are the tiny front-panel connectors, including power, reset, HDD activity light, etc. These need to go to the appropriate pins on the motherboard (usually in the bottom-right corner if your motherboard is mounted in the traditional orientation).<br><br>
+
+                      You’ll definitely need to consult your motherboard manual to see where each should go, as this also can differ based on board make and model (though it has become more standardized in recent years). Some cases will have fewer of these connectors, as things like reset switches and hard drive activity lights are becoming far less common. And some cases will provide these in a single block, rather than tiny pins, which should work in most recent-generation motherboards. Additionally, some motherboards include a block to plug the connectors into, which you can then in turn plug into the motherboard all at once.<br><br>
+                        
+                      Double-check that you’re using the right headers. These things are small (and so are their labels), so it’s easy to mess them up if you’re not paying close attention. These connectors are also easy to accidentally yank out when you're cleaning up your cables or moving things around inside the case after they've been plugged in. If you have a large graphics card or a moderate-sized card and a compact case, now is the best time to install it, and any supplemental PCIe power cables, as discussed above.<br><br>
+
+                      <h4>Management</h4><br>
+
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/a13.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      
+                      This is where you make the interior of your case pretty and tidy, and ensure that cables aren't obstructing airflow to your CPU or GPU. We’re doing this after we know that the system boots properly, because we’d hate to tear apart all of the careful wiring and cut a bunch of zip ties just to have to re-seat a component or reroute a cable. You could, of course, install your operating system before this step. <br><br>
+
+                      Clean cable routing is somewhat less important if you don’t have a case with a glass side panel or window. But it's good to keep cables out of the way of airflow, and we like things neat and pretty, so it’s time to shut the system down, unplug the power cable and clean things up.<br><br>
+
+                      Routing some cables through the back of the case during the build process is a good first step toward a clean build. But this is where you'll also shove any extra cable slack through the back panel, break out the zip ties to neaten things up and, then, put the side panels back on. You could spend hours making your cable routing as perfect as possible. But just spending 15 minutes making an effort to clean up your cables after your system boots for the first time can make a huge visual difference in how your final build looks.<br>
+
+                    </p>
+                </div>
+
+                <div class="guideblock" style="background-color: #F0F0F0; width: 100%; position: absolute; left: 1300%; top: 0;" id="b13">
+                  <h2 class="guideheader">Step 13 - Finishing Touches</h2>
+                  <h4>Installing an OS System</h4><br>
+                    <p>You'll want to make a USB install drive for Windows 11, or your operating system of choice. For Windows 10 or Windows 11, simply navigate to Microsoft’s Download page and click the “Download Tool Now” button. You’ll want to download and run the Media Creation tool, which will turn any 8GB or larger USB drive into a Windows install disk. If you don’t already have a Windows 10 or 11 key, you can get one cheap or for free. If you have a problem with the OS, you can try to reset Windows to factory settings.<br><br>
+
+                    </p><div style="float: right;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+
+                      Plug the USB drive with your operating system installer into your new computer, then power on and you should boot into your OS installer, which will step you through the process. If the system doesn’t access your installation drive, you may need to navigate to the BIOS and make sure your USB drive is visible as a boot device and that it's placed in the boot order before any internal drive or drives.<br><br>
+
+                      Once you've installed your operating system, when you first connect to the internet, Windows 10 and Windows 11 are pretty good these days at getting device drivers. However, you should still go to the manufacturers’ product pages for your parts to make sure you have or get the latest updates. <br><br>
+                        
+                      Finally, when your OS and drivers are all updated, it’s time to start using your PC! The one that you built. Install some games, stream some movies, edit some photos or video, chat on Discord — whatever it is you like to do with your PC. And remember: Whenever you’re ready to add more features or performance, you can always upgrade. <br><br>
+
+                    </p><div style="float: left; padding-right: 1rem;"><img src="/images/asrockmotherb.jpg" style="width: 25rem; height: auto; padding-left: 1rem;"></div><p>
+                      
+                      <strong>Congratulations!</strong>, you have successfully built your very first PC! Thanks for following our guide, and if you want more tips or information such as what drivers to install, ways to boost your gaming experiences and what to do to take full advantage of your 144hz monitor and more, be sure to <a style="color: #419D45;" href="more.html">click here for more</a> as well as share us with friends!<br>
+
+                    </p>
+                </div>
+
+              </div>
+
+            </section>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div style="background-image: linear-gradient(to top, rgba(115, 249, 131, 0.334), rgba(255,0,0,0)); height: 4rem; width: 200%; position: fixed; bottom: 0; left: -50%;"></div>
+    
+  </body>
+  <footer style="width: 100%; height: 18rem; background-color: #419D45; position: absolute; left: 0;">
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 8rem; left: 5%;" href="contact.html">Contact Me</a>
+
+    <a style="font-family: poppins, medium, sans-serif; color: #F0F0F0; font-size: large; position: absolute; bottom: 4rem; left: 5%;" href="references.html">Link to my Bibliography of references, research and sources</a>
+
+  </footer>
+
+  <div style="position: fixed; bottom: 0.5rem; left: 1rem; border: #419D45 solid 0.3rem; background-color: #F0F0F0; z-index: 100000; text-align: end;">
+    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="true" aria-controls="collapseWidthExample" style="color: #419D45; font-weight: 600;">
+      Hide/Show
+    </button>
+  
+    <div class="collapse show collapse-horizontal" id="collapseWidthExample">
+
+      <iframe width="280" height="160" src="https://www.youtube.com/embed/WVLx1glMqQA?si=0KMa5YYUoGQ3DzSq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <a href="#"><img src="/images/pngwing.com.png" style="width: auto; height: 8%; position: fixed; bottom: 4rem; right: 6.5%;"></a>
+
+
+</html>
